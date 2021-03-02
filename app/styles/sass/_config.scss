@@ -1,0 +1,116 @@
+
+// USER VARIABLES SECTION
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+// FONTS
+
+
+// GENERAL DOCUMENT STYLES
+
+input, textarea {
+	outline: transparent;
+}
+
+html {
+	box-sizing: border-box;
+    height: 100%;
+}
+
+html, body { 
+	// overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+    min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+.title {
+
+}
+
+
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 10px 23px;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #4424d0;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+ul,  li {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+// Input number fix
+
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none
+}
+
+button {
+	outline: transparent;
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+section {
+    overflow: hidden;
+}
+
+.container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+.overflow-hidden {
+	overflow: hidden;
+
+	body {
+		overflow: hidden
+	} 
+}
