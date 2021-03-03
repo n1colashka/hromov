@@ -9,7 +9,7 @@
 
     &__slider {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 150px;
     }
 
     &__item-wrapper {
@@ -26,7 +26,10 @@
         height: 570px;
         margin: -20px;
         padding: 20px;
+        opacity: 0.5;
+        transition: .3s ease;
         &.swiper-slide-active {
+            opacity: 1;
             position: relative;
             z-index: 3;
             .services__item-wrapper {
