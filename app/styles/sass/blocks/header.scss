@@ -1,0 +1,110 @@
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 33px;
+    padding-bottom: 10px;
+    z-index: 20;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: block;
+    }
+
+    &__phone {
+        display: inline-block;
+        margin-left: 40px;
+        margin-right: 75px;
+        font-weight: 600;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu-btn {
+        display: block;
+        width: 32px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+
+        span {
+            display: block;
+            height: 4px;
+            width: 32px;
+            margin-bottom: 6px;
+            background-color: $black;
+
+            &:nth-child(2) {
+                margin-left: auto;
+                width: 22px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__languages {
+        a {
+            position: relative;
+            display: inline-block;
+            margin-right: 0;
+            text-transform: uppercase;
+            line-height: 1;
+
+            &::after {
+                display: inline-block;
+                content: '|';
+                margin-left: 5px;
+                margin-bottom: 3px;
+            }
+
+            &.active {
+                font-weight: 700;
+            }
+
+            &:last-child {
+                margin-right: 0;
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+.menu {
+    display: none;
+    background: #F9F9F9;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 40px 60px rgba(54, 48, 116, 0.3);
+    &__head {
+    }
+
+    &__languages {
+      
+    }
+
+    &__navigation {
+    }
+
+    &__foot {
+
+        a {
+            font-weight: 600;
+        }
+    }
+
+    &__foot-title {
+    }
+}

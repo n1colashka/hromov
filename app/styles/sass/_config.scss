@@ -1,6 +1,8 @@
 
 // USER VARIABLES SECTION
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$black: #333333;
+$grey: #828282;
 // FONTS
 
 
@@ -24,16 +26,54 @@ body {
 	min-width: 320px;
     min-height: 100%;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 16px;
+	line-height: 20px;
+	color: $black;
 }
 
 *, *::before, *::after {
 	box-sizing: inherit;
 }
 
-.title {
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	min-height: 500px;
+    overflow: hidden;
+	padding: 50px 0;
+}
 
+.e-word {
+	display: inline-block;
+
+	span {
+		display: block;
+		height: 5px;
+		width: 31px;
+		background-color: $black;
+		margin-bottom: 8px;
+
+		&:nth-child(2) {
+			width: 21px;
+			height: 5px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.page-wrapper {
+	height: 100vh;
+}
+
+.title {
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 49px;
 }
 
 
@@ -42,13 +82,25 @@ body {
     border: none;
     cursor: pointer;
     line-height: 1;
-    padding: 10px 23px;
-    font-weight: 500;
-    font-size: 15px;
-    background-color: #4424d0;
-    border-radius: 5px;
+    padding: 20px 55px;
+    font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+    background: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
+	box-shadow: 5px 5px 15px rgba(111, 57, 248, 0.38), 10px 10px 15px rgba(255, 255, 255, 0.38);
     color: #fff;
     text-align: center;
+}
+
+.circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	background: #F8F8F8;
+	border-radius: 50%;
+	box-shadow: -10px -10px 15px #FFFFFF, 10px 10px 10px rgba(0, 0, 0, 0.08), inset 10px 10px 10px rgba(0, 0, 0, 0.05), inset -10px -10px 20px #FFFFFF;
 }
 
 ul,  li {
@@ -85,12 +137,8 @@ textarea {
 	resize: none;
 }
 
-section {
-    overflow: hidden;
-}
-
 .container {
-	max-width: 1180px;
+	max-width: 1200px;
 	width: 100%;
 	padding: 0 15px;
 	margin: 0 auto;
@@ -113,4 +161,13 @@ a {
 	body {
 		overflow: hidden
 	} 
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+
+	li + li {
+		margin-left: 13px;
+	}
 }

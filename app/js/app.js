@@ -183,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const da = new DynamicAdapt("max");
         da.init();
     }
+    
 
     function initAos() {
         AOS.init({
@@ -190,12 +191,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function initFullPage() {
-        new fullpage('#fullpage', {licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'});
+    function initServicesSlider() {
+        var mySwiper = new Swiper('.services__slider', {
+            slidesPerView: 3,
+            loop: true,
+            centeredSlides: true,
+            initialSlide: 2,
+        });
+    }
+
+    function initFullPageSlider() {
+        var mySwiper = new Swiper('#fullpage', {
+            direction: 'vertical',
+            speed: 1000,
+            mousewheel: {
+              invert: false,
+            },
+            // touchRatio: 0
+        });
     }
     
     // initMenu();
     // initDynamicAdapt();
     // initAos();
-    initFullPage();
+    initFullPageSlider();
+    initServicesSlider();
 })
