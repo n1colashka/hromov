@@ -53,7 +53,9 @@
         font-weight: bold;
         font-size: 35px;
         line-height: 43px;
-        color: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
+        background: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin-bottom: 15px;
     }
 
