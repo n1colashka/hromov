@@ -1,15 +1,17 @@
 .services {
-    background: url('../images/dist/services-bg.svg') top 15px center / 99% no-repeat;
-
-    &__inner {
-    }
+    background: url('../images/dist/services-bg-right-top.svg') top right no-repeat,
+    url('../images/dist/services-bg-right-bottom.svg') bottom right no-repeat,
+    url('../images/dist/services-bg-left.svg') bottom left 22px no-repeat;
+    
 
     &__title {
+        font-size: 35px;
+        line-height: 43px;
     }
 
     &__slider {
         padding-top: 50px;
-        padding-bottom: 200px;
+        padding-bottom: 150px;
         margin-left: -20px;
         margin-right: -20px;
     }

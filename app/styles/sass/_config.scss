@@ -42,11 +42,11 @@ section {
 	height: 100vh;
 	min-height: 500px;
     overflow: hidden;
-	padding: 50px 0;
 }
 
 .e-word {
 	display: inline-block;
+	margin-left: -8px;
 
 	span {
 		display: block;
