@@ -1,5 +1,24 @@
 @media (min-width: 1025px) {
    // Hover section
+   .option:hover {
+      font-weight: 600;
+      background-color: transparent;
+      color: inherit !important;
+   }
+   .form {
+      &__radio label {
+         &:hover .form__radio-item {
+            background: #F9F9F9;
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 15px 40px rgba(54, 48, 116, 0.2);
+            color: #6D37F2;
+
+            svg path {
+               fill: #6D37F2;
+            }
+         }
+      }
+   }
    .projects {
       &__img:hover {
          
@@ -9,6 +28,17 @@
 
          span {
             opacity: 1;
+         }
+      }
+   }
+   .slider-prev,
+   .slider-next {
+      &:hover {
+         svg {
+            path {
+               fill: url('#paint1_linear');
+               opacity: 1;
+            }
          }
       }
    }

@@ -1,0 +1,226 @@
+.contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    background: url('../images/dist/contacts-bg-left.svg') bottom 60px left no-repeat,
+                url('../images/dist/contacts-bg-right.svg') top 40px right no-repeat;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 40px;
+    }
+
+    &__container {
+        margin-top: auto;
+    }
+
+    &__info {
+    }
+
+    &__title {
+        margin-bottom: 110px;
+    }
+
+    &__text {
+        line-height: 135%;
+        margin-bottom: 55px;
+    }
+
+    &__content {
+        display: flex;
+        margin-bottom: 115px;
+    }
+
+    &__content-item {
+        margin-left: 70px;
+        &:first-child {
+            margin-left: 0;
+        }
+
+        a {
+            display: block;
+            color: $grey;
+            margin-bottom: 7px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__content-head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        span {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+        }
+    }
+
+    &__content-icon {
+        flex-shrink: 0;
+        margin-right: 12px;
+    }
+
+    &__socials {
+    }
+
+    &__form {
+        margin-left: 90px;
+    }
+}
+
+.form {
+    box-sizing: border-box;
+    max-width: 470px;
+    width: 100%;
+    background: #F9F9F9;
+    box-shadow: 0px 15px 40px rgba(54, 48, 116, 0.2);
+    .e-word {
+        margin: 0;
+        span {
+            width: 13px;
+            height: 2px;
+            margin-bottom: 4px;
+            background-color: #fff;
+    
+            &:nth-child(2) {
+                width: 9px;
+            }
+        }
+    }
+    &__head {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
+        color: #fff;
+        padding: 30px 47px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 134.4%;
+    }
+
+    &__wrapper {
+        border: 1px solid #FFFFFF;
+    }
+    
+    &__content {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__inner {
+        padding: 50px;
+    }
+    
+    &__item {
+        position: relative;
+        margin-bottom: 30px;
+        cursor: pointer;
+
+        svg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        input {
+            position: relative;
+            z-index: 3;
+            display: block;
+            font-size: 14px;
+            line-height: 17px;
+            padding-right: 20px;
+            width: 100%;
+            background-color: transparent;
+            padding-bottom: 10px;
+            border: none;
+            border-bottom: 1px solid $black;
+
+            &:valid:not(:placeholder-shown) {
+                border-color: #1BD264;
+
+                & ~ svg path {
+                    fill: #1BD264;
+                }
+                
+            }
+            &:invalid:not(:placeholder-shown) {
+                border-color: #E41616;
+
+                & ~  svg path {
+                    fill: #E41616;
+                }
+                
+            }
+        }
+    }
+
+    &__select {
+        padding-right: 20px;
+        background-color: transparent;
+        padding-bottom: 0;
+        border-bottom: 1px solid $black;
+    }
+
+    &__radio-items {
+        display: flex;
+    }
+
+    &__radio {
+        margin-bottom: 30px;
+        margin-left: -9px;
+        input {
+            display: none;
+            &:checked ~ .form__radio-item {
+                background: #F9F9F9;
+                color: #6D37F2;
+                border: 1px solid #FFFFFF;
+                box-shadow: 0px 15px 40px rgba(54, 48, 116, 0.2);
+
+                svg path {
+                    fill: #6D37F2;
+                }
+            } 
+        }
+
+        & > span {
+            display: block;
+            margin-bottom: 14px;
+        }
+        label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            svg {
+                margin-right: 7px;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    &__btn-wrapper {
+        text-align: center;
+    }
+
+    &__radio-item {
+        display: flex;
+        align-items: center;
+        border: 1px solid transparent;
+        padding: 9px;
+        transition: .3s ease;
+    }
+
+    &__btn {
+    }
+}

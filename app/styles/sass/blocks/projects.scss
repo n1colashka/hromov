@@ -3,23 +3,18 @@
         url('../images/dist/projects-bg-top-right.svg') right  top 40px no-repeat,
         url('../images/dist/projects-bg-bottom-right.svg') right 30px bottom no-repeat;
 
-    &__inner {
-    }
-
     &__title {
         margin-bottom: 30px;
     }
 
     &__link {
         margin-bottom: 45px;
-
-        img {
-            transform: rotate(180deg);
-        }
     }
 
     &__list {
         display: flex;
+        margin-left: -8px;
+        margin-right: -8px;
     }
 
     &__item {

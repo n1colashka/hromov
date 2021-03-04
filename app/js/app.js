@@ -200,14 +200,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function initArticlesSlider() {
+        var mySwiper = new Swiper('.articles__slider', {
+            slidesPerView: 4,
+            loop: true,
+            navigation: {
+                nextEl: '.slider-next',
+                prevEl: '.slider-prev',
+            },
+        });
+    }
+
     function initFullPageSlider() {
         var mySwiper = new Swiper('#fullpage', {
             direction: 'vertical',
             speed: 1000,
             mousewheel: {
-              invert: false,
+                invert: false,
             },
             // touchRatio: 0
+        });
+    }
+
+    function initSelect() {
+        $('select').selectize({
+            // create: true,
+            // sortField: 'text'
         });
     }
     
@@ -216,4 +234,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // initAos();
     initFullPageSlider();
     initServicesSlider();
+    initArticlesSlider();
+    initSelect();
 })
