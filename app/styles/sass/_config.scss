@@ -241,6 +241,8 @@ a {
 	align-items: center;
 	margin-left: 30px;
 	margin-top: -10px;
+	position: relative;
+	z-index: 4;
 }
 
 .slider-next {
