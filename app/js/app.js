@@ -268,6 +268,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function initProjectSlider() {
+        if (document.documentElement.clientWidth < 601) {
+            $('.project__slider').addClass('swiper-container');
+            $('.project__images').addClass('swiper-wrapper');
+            $('.project__images li').addClass('swiper-slide');
+            var mySwiper = new Swiper('.project__slider', {
+                slidesPerView: 2,
+                navigation: {
+                    nextEl: '.slider-next',
+                    prevEl: '.slider-prev',
+                },
+                spaceBetween: 20
+            });
+        }
+    }
+
     function initServicesSlider() {
         var mySwiper = new Swiper('.services__slider', {
             slidesPerView: 3,
@@ -349,4 +365,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initArticlesSlider();
     initSelect();
     initProjectsSlider();
+    initProjectSlider();
 })

@@ -336,4 +336,25 @@ a {
 	}
 }
 
+.breadcrumbs {
+	display: flex;
+	margin-left: -8px;
+	padding-top: 24px;
+	margin-right: -8px;
+	li {
+		font-size: 12px;
+		line-height: 15px;
+		margin-left: 8px;
+		margin-right: 8px;
 
+		img {
+			margin-left: 8px;
+		}
+		&:last-child {
+			img {
+				transform: rotate(90deg);
+				margin-left: -5px;
+			}
+		}
+	}
+}

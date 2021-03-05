@@ -1,0 +1,100 @@
+.project {
+    padding-top: 150px;
+    background: url('../images/dist/projects-bg-left.svg') left 12px top no-repeat,
+                url('../images/dist/project-bg-right.svg') right top 153px no-repeat,
+                url('../images/dist/project-bg-bottom.svg') right 43% bottom no-repeat;
+
+    .slider-nav {
+        display: none;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+
+    &__subtitle {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 43px;
+    }
+
+    &__left {
+        max-width: 700px;
+        margin-right: 90px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $grey;
+    }
+
+    &__list {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 30px;
+        span {
+            color: $grey;
+            font-weight: normal;
+        }
+        li {
+            margin-bottom: 7px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 33px;
+    }
+
+    &__info-item {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        &:first-child {
+            margin-left: 0;
+        }
+        b {
+            font-weight: 600;
+        }
+        span {
+            color: $grey;
+        }
+    }
+
+    &__info-icon {
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    &__images {
+        display: flex;
+        li {
+            width: 205px;
+            height: 300px;
+            box-shadow: 0px 18px 60px rgba(54, 48, 116, 0.2);
+            border: 1px solid #FFFFFF;
+            &:nth-child(2) {
+                margin-left: -95px;
+                margin-top: 45px;
+            }
+            &:nth-child(3) {
+                margin-left: -95px;
+                margin-top: 90px;
+            }
+        }
+        a {
+            display: block;
+        }
+    }
+
+}
