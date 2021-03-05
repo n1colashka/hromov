@@ -37,10 +37,9 @@
         justify-content: center;
         padding: 8px;
         cursor: pointer;
-        background: #F9F9F9;
-        border: 1px solid #FFFFFF;
+        border: none;
+        background-color: transparent;
         box-sizing: border-box;
-        box-shadow: 10px 0px 20px rgba(54, 48, 116, 0.15);
 
 
         span {
@@ -104,6 +103,7 @@
     transition: .3s ease;
     height: 90vh;
     padding: 33px;
+    z-index: 20;
     max-width: 470px;
     width: 100%;
 

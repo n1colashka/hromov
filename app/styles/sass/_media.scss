@@ -50,22 +50,130 @@
 }
 
 @media (max-width: 1200px) {
+   .steps {
+      background: url('../images/dist/steps-bg-right-top.svg') top 30px right no-repeat,
+                  url('../images/dist/steps-bg-left-top.svg') top left no-repeat;
+      &__list {
+         margin-right: auto;
+      }
+   }
 }
 
 
 @media (max-width: 1024px) {
-   
+  
+   .projects {
+      background: url('../images/dist/projects-bg-tablet.svg') left top 105px no-repeat;
+      &__link {
+         margin-bottom: 35px;
+      }
+      &__slider {
+         margin-right: -50px;
+      }
+      &__list {
+         margin: 0;
+      }
+      &__img {
+         box-shadow: 0px 18px 60px rgba(54, 48, 116, 0.2);
+      }
+      &__item {
+         width: 100%;
+         margin: 0;
+         padding: 0 18px;
+      }
+   }
+   .about {
+      background: url('../images/dist/about-bg-tablet.svg') top 22px right no-repeat;
+      &__text {
+         font-size: 14px;
+         line-height: 132.5%;
+         margin-bottom: 30px;
+         margin-right: 50px;
+      }
+      &__inner {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__boxes {
+         flex-direction: column;
+         justify-content: flex-start;
+         flex-shrink: 0;
+      }
+      &__box {
+         margin-left: 0;
+         margin-bottom: 8px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   .services {
+      background: url('../images/dist/services-bg-tablet-top.svg') top 35px right no-repeat,
+                  url('../images/dist/services-bg-tablet-bottom.svg') bottom 43px left no-repeat;
+      &__slider {
+         padding-top: 70px;
+      }
+      &__item {
+         height: 420px;
+      }
+      
+      &__item-wrapper {
+         margin: 0;
+      }
+      
+      &__item-inner {
+         padding: 20px 12px;
+      }
+      &__content {
+         margin-left: 10px;
+         p {
+            font-size: 12px;
+            line-height: 15px;
+         }
+      }
+      &__price {
+         font-size: 14px;
+         line-height: 17px;
+         padding: 20px;
+         margin-left: 6px;
+         padding-top: 0;
+      }
+      &__name {
+         font-size: 14px;
+         line-height: 111.4%;
+      }
+   }
    .header {
       padding-top: 27px;
    }
    .menu {
       padding: 25px 32px;
    }
-
+   .steps {
+      background: url('../images/dist/steps-bg-tablet-right.svg') right top 73px no-repeat,
+                  url('../images/dist/steps-bg-tablet-left.svg') left bottom 80px no-repeat;
+      &__slider {
+         height: 350px;
+         margin-right: -50px;
+      }
+      
+      &__list {
+         max-width: 100%;
+         margin: 0;
+         flex-wrap: nowrap;
+      }
+      .steps__item {
+         width: 100%;
+         margin: 12px;
+      }
+   }
 }
 
 @media (max-width: 768px) {
-  
+   .services__item {
+      height: 390px;
+   }
    .header {
       &__right  {
          a,
@@ -77,7 +185,51 @@
 }
 
 @media (max-width: 700px) {
-  
+   .services__item-inner {
+      padding: 15px 12px;
+   }
+   .services .slider-nav {
+      margin-top: 15px;
+   }
+   .services__name {
+      font-size: 13px;
+      line-height: 98.9%;
+   }
+   .services__price {
+      font-size: 12px;
+      line-height: 15px;
+      margin-left: 0;
+      padding: 0;
+      padding-left: 20px;
+      padding-bottom: 9px;
+   }
+   .services__slider {
+      padding-bottom: 0;
+      padding-top: 23px;
+   }
+   .services__head {
+      padding-left: 10px;
+   }
+   .services__item {
+      opacity: 1;
+      box-shadow: 0px 0px 15px rgba(54, 48, 116, 0.15);
+      &.swiper-slide-active .services__item-wrapper {
+         transform: scale(1);
+      }
+   }
+   .services__btn {
+      box-shadow: none;
+      font-size: 12px;
+      line-height: 15px;
+   }
+   .services {
+      &__slider {
+         padding-left: 15px;
+      }
+      .container {
+         padding-right: 0;
+      }
+   }
    .hero {
       background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
                   url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
@@ -87,9 +239,47 @@
 }
 
 @media (max-width: 600px) {
+  
+   .about {
+      background: url('../images/dist/about-bg-mob-bottom.svg') bottom right 30px no-repeat,
+                  url('../images/dist/about-bg-mob-top.svg') top 90px right no-repeat;
+      &__title {
+         margin-bottom: 20px;
+      }
+      &__text {
+         margin-right: 0;
+         margin-bottom: 15px;
+      }
+      &__boxes {
+         display: none;
+      }
+   }
+   .header__menu-btn {
+      position: fixed;
+      top: 14px;
+      right: 11px;
+      z-index: 20;
+      background: #F9F9F9;
+      border: 1px solid #FFFFFF;
+      box-shadow: 10px 0px 20px rgba(54, 48, 116, 0.15);
+   }
+   .menu {
+      position: fixed;
+   }
    .title {
       font-size: 27px;
       line-height: 33px;
+   }
+   .services__title {
+      font-size: 25px;
+      line-height: 30px;
+   }
+   .n-word {
+      &::before {
+         left: -6px;
+         width: 26px;
+         height: 3px;
+      }
    }
    .btn {
       font-size: 13px;
@@ -151,5 +341,74 @@
    }
    .container {
       padding: 0 15px;
+   }
+   .section__link {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+   }
+   .e-word {
+      margin: 0 -5px;
+   }
+   .projects {
+      &__list {
+         margin-left: 9px;
+      }
+      
+      &__slider {
+         padding-top: 60px;
+         margin-top: -60px;
+      }
+      &__title {
+         font-size: 20px;
+         line-height: 24px;
+      }
+      &__item {
+         padding: 0 9px;
+      }
+      &__type {
+         font-size: 11px;
+         line-height: 14px;
+      }
+      &__name {
+         font-size: 14px;
+         line-height: 130.4%;
+      }
+      &__slider {
+         margin-right: -15px;
+         margin-left: -15px;
+      }
+   }
+   .steps {
+      &__num {
+         font-size: 50px;
+         line-height: 61px;
+      }
+      .swiper-pagination {
+         display: flex;
+      }
+      .circle {
+         width: 42px;
+         height: 42px;
+      }
+      &__text {
+         font-size: 12px;
+         line-height: 15px;
+      }
+      &__item-inner {
+         padding-bottom: 20px;
+      }
+      &__name {
+         font-size: 13px;
+         line-height: 16px;
+      }
+      &__slider {
+         margin-right: -15px;
+         margin-left: -15px;
+      }
+      &__title {
+         font-size: 20px;
+         line-height: 24px;
+      }
    }
 }

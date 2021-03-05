@@ -3,9 +3,6 @@
                 url('../images/dist/steps-bg-left-top.svg') top left no-repeat,
                 url('../images/dist/steps-bg-left.svg') left center no-repeat;
 
-    &__inner {
-    }
-
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -53,9 +50,31 @@
         margin-bottom: 20px;
     }
 
-    &__icon {
+    &__title {
+        margin-bottom: 30px;
     }
 
+    .swiper-pagination {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        bottom: 40px;
+        font-size: 11px;
+        line-height: 13px;
+        span {
+            margin: 0 3px;
+        }
+    }
+
+    .swiper-pagination-current {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        background: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
     &__name {
         margin-left: 10px;
         font-weight: bold;

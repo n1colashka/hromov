@@ -206,12 +206,74 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    function initProjectsSlider() {
+        if (document.documentElement.clientWidth < 1025) {
+            $('.projects__slider').addClass('swiper-container');
+            $('.projects__list').addClass('swiper-wrapper');
+            $('.projects__item').addClass('swiper-slide');
+            var mySwiper = new Swiper('.projects__slider', {
+                slidesPerView: 2.8,
+                loop: true,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2.3,
+                    },
+                    600: {
+                        slidesPerView: 2.8,
+                    },
+                }
+            });
+        }
+    }
+
+    
+    function initStepsSlider() {
+        if (document.documentElement.clientWidth < 1025) {
+            $('.steps__slider').addClass('swiper-container');
+            $('.steps__list').addClass('swiper-wrapper');
+            $('.steps__item').addClass('swiper-slide');
+            var mySwiper = new Swiper('.steps__slider', {
+                slidesPerView: 2.6,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.5,
+                    },
+                    600: {
+                        slidesPerView: 2.6,
+                    },
+                }
+            });
+        }
+    }
+
     function initServicesSlider() {
         var mySwiper = new Swiper('.services__slider', {
             slidesPerView: 3,
             loop: true,
             centeredSlides: true,
             initialSlide: 2,
+            navigation: {
+                nextEl: '.slider-next',
+                prevEl: '.slider-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.4,
+                    centeredSlides: false,
+                    initialSlide: 0,
+                    spaceBetween: 15,
+                },
+                700: {
+                    centeredSlides: true,
+                    initialSlide: 2,
+                    spaceBetween: 0,
+                    slidesPerView: 3,
+                },
+            }
         });
     }
 
@@ -229,6 +291,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function initFullPageSlider() {
         var mySwiper = new Swiper('#fullpage', {
             direction: 'vertical',
+            hashNavigation: {
+                watchState: true,
+            },
             speed: 1000,
             mousewheel: {
                 invert: false,
@@ -242,11 +307,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     initMenu();
-    // initDynamicAdapt();
+    initDynamicAdapt();
+    initStepsSlider();
     // initAos();
     initFullPageSlider();
     initServicesSlider();
     initFooterPanel();
     initArticlesSlider();
     initSelect();
+    initProjectsSlider();
 })
