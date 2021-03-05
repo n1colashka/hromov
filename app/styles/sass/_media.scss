@@ -70,6 +70,9 @@
    .contacts {
       background: url('../images/dist/contacts-bg-tablet.svg') right top 125px no-repeat;
       padding-top: 25px;
+      overflow: auto;
+      min-height: 125vh;
+      height: auto;
       &__content {
          flex-direction: column;
          margin-bottom: 0;
@@ -77,7 +80,7 @@
       &__container {
          overflow: auto;
          &::-webkit-scrollbar {
-            display: none;
+            // display: none;
          }
       }
       &__text {
@@ -92,6 +95,7 @@
       }
       &__right {
          max-width: 400px;
+         margin-left: 20px;
       }
       &__title {
          margin-bottom: 100px;
@@ -337,6 +341,10 @@
 
       .current {
          color: $black;
+      }
+
+      &__right {
+         margin-left: 0;
       }
       
       &__text {

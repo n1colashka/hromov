@@ -6,11 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const menuClose = document.querySelector('.menu__close');
         const menu = document.querySelector('.menu');
         const html = document.querySelector('html');
+
+        menu.querySelectorAll('.menu__navigation a').forEach(link => {
+            link.addEventListener('click', function() {
+                menu.classList.remove('active');
+            })
+        })
         
         menuBtn.addEventListener('click', function() {
             menu.classList.add('active');
-            // menuBtn.classList.toggle('active');
-            // html.classList.toggle('overflow-hidden');
         })
         menuClose.addEventListener('click', function() {
             menu.classList.remove('active');
