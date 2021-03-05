@@ -1,6 +1,17 @@
 <!--#set var="title" value="Главная" -->
 <!--#include virtual="/parts/head.html" -->
 <body>
+	<div id="modal" class="modal" style="display: none;">
+		<div class="modal__content">
+			<div class="modal__img">
+				<img src="images/dist/thank.svg" alt="">
+			</div>
+			<div class="modal__title">Спасибо за Вашу заявку!</div>
+			<div class="modal__text">
+				Наш менеджер свяжется Вами в ближайшее время
+			</div>
+		</div>
+	</div>
 	<div class="menu-wrapper"></div>
 	<div class="footer__panel">
 		<div class="footer__socials footer__item">
@@ -686,7 +697,7 @@
 											</div>
 										</div>
 										<div class="form__btn-wrapper">
-											<button class="form__btn btn">Отправить заяввку</button>
+											<button class="form__btn btn" data-fancybox data-src="#modal" href="javascript:;">Отправить заяввку</button>
 										</div>
 									</div>
 								</div>

@@ -324,6 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function initSelect() {
         $('select').niceSelect();
     }
+
     
     initMenu();
     initDynamicAdapt();
