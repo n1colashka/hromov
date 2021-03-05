@@ -68,23 +68,19 @@
 
 @media (max-width: 1024px) {
    .contacts {
-
       display: none;
       padding-top: 25px;
-      // overflow: auto;
-      // min-height: 125vh;
-      // height: auto;
 
       &__content {
          flex-direction: column;
          margin-bottom: 0;
       }
-      &__container {
-         overflow: auto;
-         &::-webkit-scrollbar {
-            // display: none;
-         }
-      }
+      // &__container {
+      //    overflow: auto;
+      //    &::-webkit-scrollbar {
+      //       // display: none;
+      //    }
+      // }
       &__text {
          line-height: 164%;
       }
@@ -347,9 +343,13 @@
          }
       }
    }
+   .contacts-info-wrapper {
+      background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom no-repeat,
+      url('../images/dist/contacts-bg-mob-right-top.svg') right top 115px no-repeat,
+   }
    .contacts {
-      background: url('../images/dist/contacts-bg-mob-top-right.svg') right top 115px no-repeat,
-                  url('../images/dist/contacts-bg-mob-left.svg') left bottom 15px no-repeat;
+      // background: url('../images/dist/contacts-bg-mob-top-right.svg') right top 115px no-repeat,
+      //             url('../images/dist/contacts-bg-mob-left.svg') left bottom 15px no-repeat;
                   
       padding-top: 70px;
 
@@ -373,7 +373,6 @@
       &__info {
          padding-bottom: 40px;
          margin-bottom: 0;
-         background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom no-repeat;
       }
       &__wrapper {
          flex-direction: column;
