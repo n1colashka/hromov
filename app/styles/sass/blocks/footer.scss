@@ -5,4 +5,111 @@
     color: #BDBDBD;
     padding: 22px 0;
     margin-top: auto;
+
+    &__panel {
+        position: fixed;
+        z-index: 8;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        background: #F9F9F9;
+        border: 1px solid #FFFFFF;
+        box-shadow: 10px 0px 40px rgba(54, 48, 116, 0.15);
+        height: 55px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        color: $black;
+
+        
+    }
+
+    &__socials {
+
+        li + li {
+            margin-left: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        
+        &:nth-child(2) {
+            border-left: 1px solid #EFEFEF;
+        }
+
+        &.hide {
+            display: none;
+        }
+
+        &.active {
+            .footer__item-content {
+                display: flex;
+            }
+            .footer__item-head span {
+                display: none;
+            }
+        }
+
+        li {
+            font-size: 10px;
+            line-height: 12px;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+        }
+
+        &.active {
+            border: none;
+            .footer__item-head {
+                border-left: 1px solid #EFEFEF;
+            }
+        }
+    }
+
+    &__item-content {
+        display: none;
+        text-align: center;
+        img {
+            margin-bottom: 2px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        span {
+            display: block;
+        }
+    }
+
+    &__item-head {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        span {
+            font-size: 11px;
+            line-height: 13px;
+            color: $grey;
+        }
+    }
+
+    &__item-icon {
+        margin-left: 10px;
+    }
+
+    &__call {
+        padding-left: 13px;
+        li {
+            color: #000;
+        }
+        li + li {
+            margin-left: 20px;
+        }
+    }
 }

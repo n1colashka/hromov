@@ -3,30 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initMenu() {
         const menuBtn = document.querySelector('.header__menu-btn');
-        const menu = document.querySelector('.header__navigation');
-        const navigationLinks = document.querySelectorAll('.header__navigation li a');
+        const menuClose = document.querySelector('.menu__close');
+        const menu = document.querySelector('.menu');
         const html = document.querySelector('html');
         
-        if (document.documentElement.clientWidth <= 750) {
-            menuBtn.addEventListener('click', function() {
-                menu.classList.toggle('active');
-                menuBtn.classList.toggle('active');
-                html.classList.toggle('overflow-hidden');
-            })
-
-            const menuLists = document.querySelectorAll('.menu__list a');
-            menuLists.forEach(list => {
-                list.addEventListener('click', function() {
-                    if (list.parentElement.classList.contains('menu__list')) {
-                        if (list.parentElement.classList.contains('open')) {
-                            list.parentElement.classList.remove('open');
-                        } else {
-                            list.parentElement.classList.add('open');
-                        }
-                    }
-                })
-            })
-        }
+        menuBtn.addEventListener('click', function() {
+            menu.classList.add('active');
+            // menuBtn.classList.toggle('active');
+            // html.classList.toggle('overflow-hidden');
+        })
+        menuClose.addEventListener('click', function() {
+            menu.classList.remove('active');
+            menuClose.classList.remove('active');
+        })
     }
     function initDynamicAdapt() {
         function DynamicAdapt(type) {
@@ -191,6 +180,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function initFooterPanel() {
+        $('.footer__item-head').on('click', function(e) {
+            const item = this.closest('.footer__item');
+            const content = item.querySelector('.footer__item-content');
+            const caption = this.querySelector('span');
+            const items = document.querySelectorAll('.footer__item');
+
+            if (item.classList.contains('active')) {
+                items.forEach(el => {
+                    item.classList.remove('active');
+                    el.classList.remove('hide');
+                })
+            }
+            else {
+                item.classList.add('active');
+
+                items.forEach(el => {
+                    if (el != item) {
+                        el.classList.add('hide');
+                    }
+                })
+            }
+
+        })
+    }
+
     function initServicesSlider() {
         var mySwiper = new Swiper('.services__slider', {
             slidesPerView: 3,
@@ -226,11 +241,12 @@ document.addEventListener('DOMContentLoaded', function() {
         $('select').niceSelect();
     }
     
-    // initMenu();
+    initMenu();
     // initDynamicAdapt();
     // initAos();
     initFullPageSlider();
     initServicesSlider();
+    initFooterPanel();
     initArticlesSlider();
     initSelect();
 })

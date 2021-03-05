@@ -1,5 +1,8 @@
 @media (min-width: 1025px) {
    // Hover section
+   .menu__navigation a:hover {
+      font-weight: bold;
+   }
    .option:not(.disabled):hover {
       font-weight: 600;
       background-color: transparent;
@@ -51,4 +54,102 @@
 
 
 @media (max-width: 1024px) {
+   
+   .header {
+      padding-top: 27px;
+   }
+   .menu {
+      padding: 25px 32px;
+   }
+
+}
+
+@media (max-width: 768px) {
+  
+   .header {
+      &__right  {
+         a,
+         .header__languages {
+            display: none;
+         }
+      }
+   }
+}
+
+@media (max-width: 700px) {
+  
+   .hero {
+      background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
+                  url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
+                  url('../images/dist/hero-bg-tablet-bottom-right.svg') bottom 55px right no-repeat;
+      
+   }
+}
+
+@media (max-width: 600px) {
+   .title {
+      font-size: 27px;
+      line-height: 33px;
+   }
+   .btn {
+      font-size: 13px;
+      padding: 14px 20px;
+      min-width: 190px;
+   }
+   .e-word {
+      span {
+         width: 20px;
+         height: 3px;
+         margin-bottom: 5px;
+
+         &:nth-child(2) {
+            width: 14px;
+            height: 3px;
+         }
+      }
+   }
+   body {
+      font-size: 12px;
+      line-height: 118.5%;
+   }
+   .header {
+      &__languages {
+         position: absolute;
+         left: 32px;
+         bottom: 25px;
+      }
+   }
+   .menu {
+      left: 15px;
+      max-width: 100%;
+      &__head {
+         justify-content: flex-end;
+      }
+      &__foot {
+         display: none;
+      }
+   }
+   .footer__panel {
+      display: flex;
+   }
+   .circle {
+      width: 31px;
+      height: 31px;
+   }
+   .hero {
+      background: url('../images/dist/hero-bg-mob-top.svg') top 100px left no-repeat,
+      url('../images/dist/hero-bg-mob-bottom.svg') bottom 81px right no-repeat;
+      &__title {
+         margin-bottom: 23px;
+      }
+      &__text {
+         margin-bottom: 23px;
+      }
+      &__socials {
+         display: none;
+      }
+   }
+   .container {
+      padding: 0 15px;
+   }
 }

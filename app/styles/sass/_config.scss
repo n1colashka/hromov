@@ -32,7 +32,7 @@ body {
 }
 
 *, *::before, *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 section {
@@ -148,9 +148,9 @@ textarea {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1270px;
 	width: 100%;
-	padding: 0 15px;
+	padding: 0 50px;
 	margin: 0 auto;
 }
 
