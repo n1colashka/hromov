@@ -285,6 +285,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 nextEl: '.slider-next',
                 prevEl: '.slider-prev',
             },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.5,
+                },
+                600: {
+                    slidesPerView: 2.5,
+                },
+                1024: {
+                    slidesPerView: 4,
+                }
+            }
         });
     }
 

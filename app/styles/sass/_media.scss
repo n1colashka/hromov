@@ -50,6 +50,12 @@
 }
 
 @media (max-width: 1200px) {
+   .contacts {
+      &__form {
+         margin-left: 20px;
+         max-width: 400px;
+      }
+   }
    .steps {
       background: url('../images/dist/steps-bg-right-top.svg') top 30px right no-repeat,
                   url('../images/dist/steps-bg-left-top.svg') top left no-repeat;
@@ -61,7 +67,61 @@
 
 
 @media (max-width: 1024px) {
-  
+   .contacts {
+      background: url('../images/dist/contacts-bg-tablet.svg') right top 125px no-repeat;
+      padding-top: 25px;
+      &__content {
+         flex-direction: column;
+         margin-bottom: 0;
+      }
+      &__container {
+         overflow: auto;
+         &::-webkit-scrollbar {
+            display: none;
+         }
+      }
+      &__text {
+         line-height: 164%;
+      }
+      &__content-item {
+         margin-left: 0;
+         margin-bottom: 32px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+      &__right {
+         max-width: 400px;
+      }
+      &__title {
+         margin-bottom: 100px;
+      }
+      &__info {
+         margin-top: auto;
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 60px;
+      }
+      &__form {
+         max-width: 470px;
+         margin-left: 0;
+      }
+      &__inner {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+   .articles {
+      background: url('../images/dist/articles-bg-tablet-top-right.svg') top 30px right no-repeat,
+                  url('../images/dist/articles-bg-tablet-top-left.svg') top 100px left no-repeat,
+                  url('../images/dist/articles-bg-tablet-bottom-right.svg') bottom 76px right no-repeat;
+      &__slider {
+         margin-right: -50px;
+      }
+      &__item-wrapper {
+         margin: 40px 5px;
+      }
+   }
    .projects {
       background: url('../images/dist/projects-bg-tablet.svg') left top 105px no-repeat;
       &__link {
@@ -239,7 +299,96 @@
 }
 
 @media (max-width: 600px) {
-  
+   .form {
+      &__radio-item {
+         font-size: 12px;
+         line-height: 15px;
+         padding: 3px;
+      }
+      &__radio-items {
+         label {
+            margin-left: 5px;
+            svg {
+               height: auto;
+            }
+            &:first-child {
+               svg {
+                  width: 16px;
+               }
+            }
+            &:nth-child(2) {
+               svg {
+                  width: 14px;
+               }
+            }
+            &:nth-child(3) {
+               svg {
+                  width: 15px;
+               }
+            }
+         }
+      }
+   }
+   .contacts {
+      padding-top: 70px;
+
+      .current {
+         color: $black;
+      }
+      
+      &__text {
+         font-size: 12px;
+         line-height: 135%;
+         margin: 0;
+      }
+      
+      &__content {
+         margin-bottom: 25px;
+      }
+      &__info {
+         margin-bottom: 40px;
+      }
+      &__wrapper {
+         flex-direction: column;
+
+         p {
+            margin-bottom: 20px;
+         }
+      }
+      &__title {
+         margin-bottom: 35px;
+      }
+      &__content-head {
+         span {
+            font-size: 14px;
+            line-height: 17px;
+         }
+      }
+   }
+   .form {
+      &__item {
+         input {
+            &::placeholder {
+               color: $black;
+               opacity: 1;
+            }
+         }
+      }
+      &__radio {
+         margin-left: 0;
+      }
+      &__inner {
+         padding: 30px 13px;
+      }
+      &__head {
+         padding: 20px 13px;
+         font-size: 12px;
+         line-height: 134.4%;
+      }
+      .e-word span:nth-child(2) {
+         height: 2px;
+      }
+   }
    .about {
       background: url('../images/dist/about-bg-mob-bottom.svg') bottom right 30px no-repeat,
                   url('../images/dist/about-bg-mob-top.svg') top 90px right no-repeat;
@@ -409,6 +558,47 @@
       &__title {
          font-size: 20px;
          line-height: 24px;
+      }
+   }
+   
+   .articles {
+      background: url('../images/dist/articles-bg-mob.svg') top 110px left no-repeat;
+      &__title {
+         font-size: 20px;
+         line-height: 105.9%;
+      }
+      &__item-wrapper {
+         margin: 40px 9px;
+      }
+      &__link {
+         margin-bottom: -20px;
+      }
+      &__title {
+         margin-bottom: 25px;
+      }
+      .slider-nav {
+         justify-content: center;
+         margin-top: -20px;
+      }
+      &__text {
+         font-size: 12px;
+         line-height: 129.5%;
+      }
+      .circle {
+         width: 26px;
+         height: 26px;
+      }
+      &__foot-item {
+         font-size: 11px;
+         line-height: 13px;
+      }
+      &__slider {
+         padding-bottom: 20px;
+         margin-right: -15px;
+      }
+      &__item-inner {
+         min-height: 145px;
+         padding: 18px 12px;
       }
    }
 }
