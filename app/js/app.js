@@ -304,6 +304,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initFullPageSlider() {
+        if (document.documentElement.clientWidth < 1025) {
+            $('.contacts-info-wrapper').addClass('swiper-slide');
+            $('.contacts-form-wrapper').addClass('swiper-slide');
+        }
         var mySwiper = new Swiper('#fullpage', {
             direction: 'vertical',
             hashNavigation: {

@@ -49,7 +49,7 @@
 		</div>
 	</div>
 	<div id="fullpage" class="page-wrapper swiper-container">
-		<div class="swiper-wrapper">
+		<div class="swiper-wrapper fullpage-wrapper">
 			<!--#include virtual="/parts/header.html" -->
 			<section class="swiper-slide hero" data-hash="hero">
 				<div class="container">
@@ -529,10 +529,20 @@
 					</div>
 				</div>
 			</section>
+			<section class="contacts-info-wrapper">
+				<div class="container contacts-info-container">
+
+				</div>
+			</section>
+			<section class="contacts-form-wrapper">
+				<div class="container contacts-form-container">
+
+				</div>
+			</section>
 			<section class="contacts swiper-slide" data-hash="contacts">
 				<div class="container contacts__container">
 					<div class="contacts__inner">
-						<div class="contacts__info">
+						<div class="contacts__info" data-hash="info" data-da=".contacts-info-container, 1024, 1">
 							<h1 class="contacts__title title">
 								<span>Давайте детально обсудим</span>
 								<span class="purple">
@@ -593,7 +603,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="contacts__form form" id="form">
+						<div class="contacts__form form" data-hash="form"  data-da=".contacts-form-container, 1024, 1">
 							<form action="#" required>
 								<div class="form__head">
 									ЗАКАЖИТ

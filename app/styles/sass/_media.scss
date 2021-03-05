@@ -68,11 +68,13 @@
 
 @media (max-width: 1024px) {
    .contacts {
-      background: url('../images/dist/contacts-bg-tablet.svg') right top 125px no-repeat;
+
+      display: none;
       padding-top: 25px;
-      overflow: auto;
-      min-height: 125vh;
-      height: auto;
+      // overflow: auto;
+      // min-height: 125vh;
+      // height: auto;
+
       &__content {
          flex-direction: column;
          margin-bottom: 0;
@@ -114,6 +116,18 @@
          flex-direction: column;
          align-items: flex-start;
       }
+   }
+   .contacts-info-wrapper,
+   .contacts-info-form {
+      display: flex;
+      .container {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+   .contacts-info-wrapper {
+      background: url('../images/dist/contacts-bg-tablet.svg') right top 125px no-repeat;
    }
    .articles {
       background: url('../images/dist/articles-bg-tablet-top-right.svg') top 30px right no-repeat,
