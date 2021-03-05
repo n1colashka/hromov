@@ -223,10 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initSelect() {
-        $('select').selectize({
-            create: true,
-            sortField: 'text'
-        });
+        $('select').niceSelect();
     }
     
     // initMenu();

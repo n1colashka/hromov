@@ -1,10 +1,11 @@
 @media (min-width: 1025px) {
    // Hover section
-   .option:hover {
+   .option:not(.disabled):hover {
       font-weight: 600;
       background-color: transparent;
       color: inherit !important;
    }
+   
    .form {
       &__radio label {
          &:hover .form__radio-item {

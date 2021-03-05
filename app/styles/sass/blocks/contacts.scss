@@ -136,6 +136,7 @@
             line-height: 17px;
             padding-right: 20px;
             width: 100%;
+            cursor: pointer;
             background-color: transparent;
             padding-bottom: 10px;
             border: none;
@@ -161,10 +162,10 @@
     }
 
     &__select {
-        padding-right: 20px;
+        padding-right: 0;
         background-color: transparent;
-        padding-bottom: 0;
-        border-bottom: 1px solid $black;
+        padding-bottom: 30px;
+        border-bottom: none;
     }
 
     &__radio-items {
