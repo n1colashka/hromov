@@ -200,6 +200,8 @@ a {
 
 .section {
 	&__link {
+		position: relative;
+		z-index: 3;
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
@@ -294,3 +296,44 @@ a {
 		color: $grey;
 	}
 }
+
+.pagination {
+	position: relative;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	padding-top: 27px;
+
+	&__arrow svg {
+		width: 16px;
+		height: 5px;
+	}
+	li {
+		margin-left: 5px;
+		margin-right: 5px;
+		transition: .3s ease;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	.pagination__arrow--prev {
+		margin-right: 10px;
+	}
+
+	.pagination__arrow--next {
+		margin-left: 10px;
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	.active {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 2px;
+	}
+}
+
+

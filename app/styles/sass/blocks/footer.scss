@@ -22,7 +22,6 @@
         display: none;
         color: $black;
 
-        
     }
 
     &__socials {
@@ -105,6 +104,11 @@
 
     &__call {
         padding-left: 13px;
+
+        .footer__item-head {
+            margin-left: auto;
+        }
+        
         li {
             color: #000;
         }

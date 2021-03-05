@@ -215,18 +215,32 @@ document.addEventListener('DOMContentLoaded', function() {
             $('.projects__slider').addClass('swiper-container');
             $('.projects__list').addClass('swiper-wrapper');
             $('.projects__item').addClass('swiper-slide');
-            var mySwiper = new Swiper('.projects__slider', {
-                slidesPerView: 2.8,
-                loop: true,
-                breakpoints: {
-                    320: {
-                        slidesPerView: 2.3,
-                    },
-                    600: {
-                        slidesPerView: 2.8,
-                    },
-                }
-            });
+            if (document.querySelector('.projects-page')) {
+                var mySwiper = new Swiper('.projects-page__slider', {
+                    slidesPerView: 2.8,
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 2,
+                        },
+                        600: {
+                            slidesPerView: 2.8,
+                        },
+                    }
+                });
+            }
+            else {
+                var mySwiper = new Swiper('.projects__slider', {
+                    slidesPerView: 2.8,
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 2.3,
+                        },
+                        600: {
+                            slidesPerView: 2.8,
+                        },
+                    }
+                });
+            }
         }
     }
 
@@ -284,7 +298,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function initArticlesSlider() {
         var mySwiper = new Swiper('.articles__slider', {
             slidesPerView: 4,
-            loop: true,
             navigation: {
                 nextEl: '.slider-next',
                 prevEl: '.slider-prev',

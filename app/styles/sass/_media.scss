@@ -8,7 +8,11 @@
       background-color: transparent;
       color: inherit !important;
    }
-   
+   .pagination {
+      li:hover {
+         color: #6D37F2;
+      }
+   }
    .form {
       &__radio label {
          &:hover .form__radio-item {
@@ -35,8 +39,8 @@
          }
       }
    }
-   .slider-prev,
-   .slider-next {
+   .arrow-prev,
+   .arrow-next {
       &:hover {
          svg {
             path {
@@ -67,6 +71,12 @@
 
 
 @media (max-width: 1024px) {
+   .projects-page {
+      .projects {
+         background: url('../images/dist/portfolio-bg-tablet-right.svg') right bottom 73px no-repeat,
+         url('../images/dist/portfolio-bg-tablet-left.svg') left top 203px no-repeat;
+      }
+   }
    .contacts {
       display: none;
       padding-top: 25px;
@@ -75,12 +85,6 @@
          flex-direction: column;
          margin-bottom: 0;
       }
-      // &__container {
-      //    overflow: auto;
-      //    &::-webkit-scrollbar {
-      //       // display: none;
-      //    }
-      // }
       &__text {
          line-height: 164%;
       }
@@ -258,6 +262,7 @@
 }
 
 @media (max-width: 700px) {
+   
    .services__item-inner {
       padding: 15px 12px;
    }
@@ -312,6 +317,25 @@
 }
 
 @media (max-width: 600px) {
+   .projects-page {
+      .projects-page__slider {
+         margin-bottom: -40px;
+      }
+      .projects__item {
+         padding: 0 18px;
+         padding-left: 0;
+      }
+   }
+   .pagination  {
+      li {
+         font-size: 11px;
+         line-height: 13px;
+      }
+      .active {
+         font-size: 14px;
+         line-height: 17px;
+      }
+   }
    .modal {
       padding: 15px;
       width: 100%;

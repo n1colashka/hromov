@@ -66,3 +66,19 @@
         color: $grey;
     }
 }
+
+.projects-page {
+    overflow: hidden;
+    .projects {
+        background: 
+                    url('../images/dist/projects-bg-bottom-right.svg') left 22px bottom no-repeat,
+                    url('../images/dist/projects-bg-top-right.svg') right top 40px no-repeat,
+                    url('../images/dist/projects-bg-bottom-right.svg') right 30px bottom no-repeat;
+    }
+    .projects__link {
+        margin-bottom: 35px;
+    }
+    .projects__img {
+        box-shadow: 0px 18px 60px rgba(54, 48, 116, 0.2);
+    }
+}
