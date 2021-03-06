@@ -387,9 +387,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initCursor() {
-        var kursorx = new kursor({
-            type: 4,
-            removeDefaultCursor: true
+        var cursor = document.querySelector(".cursor");
+        document.addEventListener("mousemove", function(e){
+            cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+        });
+        $('.btn, a, button').on('mouseenter', function(e) {
+            $(cursor).addClass('hovered');
+        })
+        $('.btn, a, button').on('mouseleave', function(e) {
+            $(cursor).removeClass('hovered');
+        })
+        $('.btn, a, button').on('click', function(e) {
+            $(cursor).addClass('active');
+            setTimeout(() => {
+            $(cursor).removeClass('active');
+            }, 100);
         })
     }
 
