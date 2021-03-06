@@ -81,6 +81,9 @@
 
 
 @media (max-width: 1024px) {
+   .cursor {
+      display: none;
+   }
    .pagination__arrow {
       margin-bottom: 3px;
    }
@@ -828,7 +831,7 @@
    }
    .hero {
       background: url('../images/dist/hero-bg-mob-top.svg') top 100px left no-repeat,
-      url('../images/dist/hero-bg-mob-bottom.svg') bottom 81px right no-repeat;
+      url('../images/dist/hero-bg-mob-bottom.svg') bottom 121px right no-repeat;
       &__title {
          margin-bottom: 23px;
       }
@@ -838,6 +841,9 @@
       &__socials {
          display: none;
       }
+   }
+   .services {
+      background: url('../images/dist/services-bg-mob.svg') top 100px right no-repeat;
    }
    .container {
       padding: 0 15px;
