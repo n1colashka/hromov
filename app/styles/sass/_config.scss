@@ -105,7 +105,7 @@ section {
 .btn {
     display: inline-block;
     border: none;
-    cursor: pointer;
+    // cursor: pointer;
     line-height: 1;
     padding: 20px;
 	min-width: 240px;
@@ -115,7 +115,15 @@ section {
     background: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
 	box-shadow: 5px 5px 15px rgba(111, 57, 248, 0.38), 10px 10px 15px rgba(255, 255, 255, 0.38);
     color: #fff;
+	transition: .2s ease-in;
     text-align: center;
+
+	&:focus, &:visited {
+		box-shadow:-43px -23px 24px 7px rgba(255,255,255,255.35);
+	}
+	&:active {
+		box-shadow:13px 17px 24px 7px rgba(255,255,255,255.35);
+	}
 }
 
 .circle {
@@ -213,6 +221,16 @@ a {
 			width: 20px;
         }
     }
+}
+
+.arrow-prev,
+.arrow-next {
+	&:focus, &:active {
+		path {
+			opacity: 1;
+			fill: url('#paint1_linear');
+		}
+	}
 }
 
 .slider-prev,

@@ -386,6 +386,13 @@ document.addEventListener('DOMContentLoaded', function() {
         $(".article__content").mCustomScrollbar();
     }
 
+    function initCursor() {
+        var kursorx = new kursor({
+            type: 4,
+            removeDefaultCursor: true
+        })
+    }
+
     
     initMenu();
     initDynamicAdapt();
@@ -399,4 +406,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectsSlider();
     initProjectSlider();
     initScrollbar();
+    initCursor();
 })
