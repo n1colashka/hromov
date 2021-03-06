@@ -1,0 +1,98 @@
+.article {
+    background: url('../images/dist/article-bg-left.svg') bottom 53px left no-repeat;
+    &__container {
+        background: url('../images/dist/article-bg-right.svg') top 36px right no-repeat;
+    }
+
+    .mCSB_scrollTools .mCSB_draggerRail {
+        opacity: 0;
+    }
+
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        background: linear-gradient(327.56deg, #5D24D6 19.23%, #7E74ED 81.76%);
+        box-shadow: 0px 2px 3px rgba(43, 72, 180, 0.4), inset 1px 1px 3px rgba(255, 255, 255, 0.4);
+    }
+    
+    .mCSB_scrollTools .mCSB_draggerContainer {
+        width: 8px;
+        background: #DEDDE3;
+        box-shadow: -3px -3px 5px #FFFFFF, 3px 3px 5px rgba(0, 0, 0, 0.05), inset 3px 3px 5px rgba(0, 0, 0, 0.05), inset -3px -3px 5px #FFFFFF;
+    }
+    
+    &__head {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 210px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-top: 20px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        margin-top: 90px;
+    }
+
+    &__box {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__content {
+        height: 39vh;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 129.4%;
+        color: $grey;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 119.9%;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 119.9%;
+        margin-bottom: 20px;
+    }
+
+    h4,h5,h6 {
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    &__arrows {
+        display: flex;
+
+        svg path {
+            opacity: .3;
+        }
+
+        svg, path {
+            transition: .3s ease-in-out;
+        }
+    }
+    .arrow-next {
+        margin-left: 10px;
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}

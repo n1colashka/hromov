@@ -312,24 +312,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initArticlesSlider() {
-        var mySwiper = new Swiper('.articles__slider', {
-            slidesPerView: 4,
-            navigation: {
-                nextEl: '.slider-next',
-                prevEl: '.slider-prev',
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.5,
-                },
-                600: {
-                    slidesPerView: 2.5,
-                },
-                1024: {
+        if (document.querySelector('.blog__slider')) {
+            if (document.documentElement.clientWidth > 600) {
+                var mySwiper = new Swiper('.blog__slider', {
                     slidesPerView: 4,
-                }
+                    navigation: {
+                        nextEl: '.slider-next',
+                        prevEl: '.slider-prev',
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: 1.5,
+                        },
+                        600: {
+                            slidesPerView: 2.5,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                        }
+                    }
+                });
+            } else {
+                $('.blog__slider').removeClass('swiper-container');
+                $('.blog__list').removeClass('swiper-wrapper');
+                $('.articles__item').removeClass('swiper-slide');
             }
-        });
+        } else {
+            var mySwiper = new Swiper('.articles__slider', {
+                slidesPerView: 4,
+                navigation: {
+                    nextEl: '.slider-next',
+                    prevEl: '.slider-prev',
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.5,
+                    },
+                    600: {
+                        slidesPerView: 2.5,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                    }
+                }
+            });
+        }
+        
     }
 
     function initFullPageSlider() {
@@ -354,6 +382,10 @@ document.addEventListener('DOMContentLoaded', function() {
         $('select').niceSelect();
     }
 
+    function initScrollbar() {
+        $(".article__content").mCustomScrollbar();
+    }
+
     
     initMenu();
     initDynamicAdapt();
@@ -366,4 +398,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initSelect();
     initProjectsSlider();
     initProjectSlider();
+    initScrollbar();
 })

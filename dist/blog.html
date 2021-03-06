@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Блог</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body class="blog-page">
+	<div id="modal" class="modal" style="display: none;">
+		<div class="modal__content">
+			<div class="modal__img">
+				<img src="images/dist/thank.svg" alt="">
+			</div>
+			<div class="modal__title">Спасибо за Вашу заявку!</div>
+			<div class="modal__text">
+				Наш менеджер свяжется Вами в ближайшее время
+			</div>
+		</div>
+	</div>
+	<div class="menu-wrapper"></div>
+	<div class="footer__panel">
+		<div class="footer__socials footer__item">
+			<div class="footer__item-content">
+				<ul>
+					<li>
+						<a href="#">
+							<img width="7" src="images/dist/fb.svg" alt="">
+							<span>Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img width="14" src="images/dist/telegram.svg" alt="">
+							<span>Telegram</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img  width="14" src="images/dist/instagram.svg" alt="">
+							<span>Instagram</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item-head">
+				<span>Мы в соц. сетях</span>
+				<div class="footer__item-icon circle">
+					<img src="images/dist/share.svg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="footer__call footer__item">
+			<div class="footer__item-content">
+				<ul>
+					<li><a href="tel:+38(073)1139719">+ 38 (073) 113 97 19</a></li>
+					<li><a href="tel:+38(073)1139719">+ 38 (073) 113 97 19</a></li>
+				</ul>
+			</div>
+			<div class="footer__item-head">
+				<span>Позвоните нам</span>
+				<div class="footer__item-icon circle">
+					<img src="images/dist/phone.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="./" class="header__logo">
+                <img src="images/dist/logo.png" alt="hromov code">
+            </a>
+            <div class="header__right">
+                <div class="header__languages">
+                    <a href="#" class="active">Ru</a>
+                    <a href="#">En</a>
+                </div>
+                <a class="header__phone" href="tel:+380731139729">+38 (073) 113 97 29</a>
+                <button class="header__menu-btn" data-da="body,600,1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="menu" data-da=".menu-wrapper,600,1">
+                <div class="menu__head">
+                    <div class="header__languages menu__languages">
+                        <a href="#" class="active">Ru</a>
+                        <a href="#">En</a>
+                    </div>
+                    <button class="menu__close">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <nav class="menu__navigation">
+                    <ul>
+                        <li><a href="./">Главная</a></li>
+                        <li><a href="#services">Наши услуги</a></li>
+                        <li><a href="#services">О нас</a></li>
+                        <li><a href="#about">Портфолио</a></li>
+                        <li><a href="#projects">Этапы работы</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__foot">
+                    <div class="menu__foot-title">Телефон для связи:</div>
+                    <a href="tel:+380731139729">+38 (073) 113 97 29</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	<section class="articles">
+        <div class="container">
+            <div class="articles__inner">
+                <h1 class="articles__title title">
+                    <span>Интер</span>
+                        <span class="e-word">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    <span>сно знать</span>
+                </h1>
+                
+                <a href="index.html" class="articles__link section__link">
+                    <span>На главную</span>
+                    <img src="images/dist/arrow.svg" alt="">
+                </a>
+                <div class="articles__slider swiper-container blog__slider">
+                    <div class="swiper-wrapper blog__list">
+                        <div class="articles__item swiper-slide">
+                            <a href="article.html" class="articles__item-wrapper">
+                                <div class="articles__img">
+                                    <img src="images/dist/articles-1.jpg" alt="">
+                                </div>
+                                <div class="articles__item-inner">
+                                    <div class="articles__text">
+                                        Верстка html css с нуля:полезные советы для новичков видеоуроки онлайн
+                                    </div>
+                                    <div class="articles__foot">
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/clock.svg" alt="">
+                                            </div>
+                                            <span>15.01.21</span>
+                                        </div>
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/eye.svg" alt="">
+                                            </div>
+                                            <span>323</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="articles__item swiper-slide">
+                            <a href="#" class="articles__item-wrapper">
+                                <div class="articles__img">
+                                    <img src="images/dist/articles-1.jpg" alt="">
+                                </div>
+                                <div class="articles__item-inner">
+                                    <div class="articles__text">
+                                        Верстка html css с нуля:полезные советы для новичков видеоуроки онлайн
+                                    </div>
+                                    <div class="articles__foot">
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/clock.svg" alt="">
+                                            </div>
+                                            <span>15.01.21</span>
+                                        </div>
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/eye.svg" alt="">
+                                            </div>
+                                            <span>323</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="articles__item swiper-slide">
+                            <a href="#" class="articles__item-wrapper">
+                                <div class="articles__img">
+                                    <img src="images/dist/articles-1.jpg" alt="">
+                                </div>
+                                <div class="articles__item-inner">
+                                    <div class="articles__text">
+                                        Верстка html css с нуля:полезные советы для новичков видеоуроки онлайн
+                                    </div>
+                                    <div class="articles__foot">
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/clock.svg" alt="">
+                                            </div>
+                                            <span>15.01.21</span>
+                                        </div>
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/eye.svg" alt="">
+                                            </div>
+                                            <span>323</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="articles__item swiper-slide">
+                            <a href="#" class="articles__item-wrapper">
+                                <div class="articles__img">
+                                    <img src="images/dist/articles-1.jpg" alt="">
+                                </div>
+                                <div class="articles__item-inner">
+                                    <div class="articles__text">
+                                        Верстка html css с нуля:полезные советы для новичков видеоуроки онлайн
+                                    </div>
+                                    <div class="articles__foot">
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/clock.svg" alt="">
+                                            </div>
+                                            <span>15.01.21</span>
+                                        </div>
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/eye.svg" alt="">
+                                            </div>
+                                            <span>323</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="articles__item swiper-slide">
+                            <a href="#" class="articles__item-wrapper">
+                                <div class="articles__img">
+                                    <img src="images/dist/articles-1.jpg" alt="">
+                                </div>
+                                <div class="articles__item-inner">
+                                    <div class="articles__text">
+                                        Верстка html css с нуля:полезные советы для новичков видеоуроки онлайн
+                                    </div>
+                                    <div class="articles__foot">
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/clock.svg" alt="">
+                                            </div>
+                                            <span>15.01.21</span>
+                                        </div>
+                                        <div class="articles__foot-item">
+                                            <div class="articles__icon circle">
+                                                <img src="images/dist/eye.svg" alt="">
+                                            </div>
+                                            <span>323</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="slider-prev arrow-prev">
+                            <svg width="42" height="13" viewBox="0 0 42 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M35.8853 0.505981L34.0483 2.34309L37.0268 5.32162H0.758667V7.9197H37.0268L34.0483 10.8983L35.8853 12.7354L42 6.62066L35.8853 0.505981Z" fill="#11141C"/>
+                                <defs>
+                                
+                                <linearGradient id="paint1_linear" x1="40.7059" y1="11.2067" x2="0.104679" y2="4.41626" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#380085"/>
+                                <stop offset="1" stop-color="#733DFF"/>
+                                <stop offset="1" stop-color="#733DFF"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="slider-next arrow-next">
+                            <svg width="42" height="13" viewBox="0 0 42 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.11472 12.7353L7.95173 10.8982L4.97321 7.91971L41.2413 7.91972L41.2413 5.32163L4.97321 5.32163L7.95173 2.34301L6.11472 0.505909L-4.90565e-05 6.62067L6.11472 12.7353Z" fill="#11141C"/>
+                                <defs>
+                                <linearGradient id="paint1_linear" x1="40.7059" y1="11.2067" x2="0.104679" y2="4.41626" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#380085"/>
+                                    <stop offset="1" stop-color="#733DFF"/>
+                                    <stop offset="1" stop-color="#733DFF"/>
+                                </linearGradient>
+                                
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pagination">
+                    <li class="pagination__arrow pagination__arrow--prev arrow-prev">
+                       <a href="#">
+                        <svg width="19" height="6" viewBox="0 0 42 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.11472 12.7353L7.95173 10.8982L4.97321 7.91971L41.2413 7.91972L41.2413 5.32163L4.97321 5.32163L7.95173 2.34301L6.11472 0.505909L-4.90565e-05 6.62067L6.11472 12.7353Z" fill="#11141C"/>
+                            <defs>
+                            <linearGradient id="paint1_linear" x1="40.7059" y1="11.2067" x2="0.104679" y2="4.41626" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#380085"/>
+                                <stop offset="1" stop-color="#733DFF"/>
+                                <stop offset="1" stop-color="#733DFF"/>
+                            </linearGradient>
+                            
+                            </defs>
+                        </svg>
+                       </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li class="dots">...</li>
+                    <li><a href="#">8</a></li>
+                    <li class="pagination__arrow pagination__arrow--next arrow-next">
+                        <a href="#">
+                            <svg width="19" height="6" viewBox="0 0 42 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.11472 12.7353L7.95173 10.8982L4.97321 7.91971L41.2413 7.91972L41.2413 5.32163L4.97321 5.32163L7.95173 2.34301L6.11472 0.505909L-4.90565e-05 6.62067L6.11472 12.7353Z" fill="#11141C"/>
+                                <defs>
+                                <linearGradient id="paint1_linear" x1="40.7059" y1="11.2067" x2="0.104679" y2="4.41626" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#380085"/>
+                                    <stop offset="1" stop-color="#733DFF"/>
+                                    <stop offset="1" stop-color="#733DFF"/>
+                                </linearGradient>
+                                
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+	
+
+
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+	integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+</html>
