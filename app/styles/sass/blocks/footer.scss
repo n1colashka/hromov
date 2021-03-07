@@ -4,7 +4,9 @@
     width: 100%;
     color: #BDBDBD;
     padding: 22px 0;
-    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
     &__panel {
         position: fixed;

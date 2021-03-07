@@ -81,6 +81,18 @@
 
 
 @media (max-width: 1024px) {
+   .contacts-info-wrapper {
+      background: url('../images/dist/info-bg-tablet-top.svg') top 125px right 0 no-repeat;
+   }
+   .contacts-form-wrapper {
+      background: url('../images/dist/form-bg-tablet-bottom.svg') bottom right 55px no-repeat;
+   }
+   .footer__copy {
+      margin-right: auto;
+   }
+   html, * {
+      cursor: auto !important;
+   }
    .cursor {
       display: none;
    }
@@ -134,6 +146,12 @@
          flex-direction: column;
          margin-bottom: 0;
       }
+      &__content-icon {
+         img {
+            max-width: 19px;
+            width: 100%;
+         }
+      }
       &__text {
          line-height: 164%;
       }
@@ -174,9 +192,7 @@
          justify-content: center;
       }
    }
-   .contacts-info-wrapper {
-      background: url('../images/dist/contacts-bg-tablet.svg') right top 125px no-repeat;
-   }
+  
    .articles {
       background: url('../images/dist/articles-bg-tablet-top-right.svg') top 30px right no-repeat,
                   url('../images/dist/articles-bg-tablet-top-left.svg') top 100px left no-repeat,
@@ -198,6 +214,9 @@
       }
       &__list {
          margin: 0;
+      }
+      &__title {
+         margin-bottom: 40px;
       }
       &__img {
          box-shadow: 0px 18px 60px rgba(54, 48, 116, 0.2);
@@ -297,8 +316,10 @@
 }
 
 @media (max-width: 768px) {
-   .services__item {
-      height: 390px;
+   .hero {
+      background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
+                  url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
+                  url('../images/dist/hero-bg-tablet-bottom-right.svg') bottom 55px right no-repeat;
    }
    .header {
       &__right  {
@@ -308,9 +329,14 @@
          }
       }
    }
+  
+   
 }
 
 @media (max-width: 700px) {
+   .services__item {
+      height: 360px;
+   }
    .services .slider-nav {
       margin-left: 0;
    }
@@ -359,19 +385,27 @@
          padding-right: 0;
       }
    }
-   .hero {
-      background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
-                  url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
-                  url('../images/dist/hero-bg-tablet-bottom-right.svg') bottom 55px right no-repeat;
-      
-   }
+   
 }
 
 @media (max-width: 600px) {
    
+   .contacts-form-wrapper {
+      background: none;
+   }
+   .title {
+      font-size: 27px;
+      line-height: 33px;
+   }
+   .slider-nav {
+      margin-left: 15px;
+   }
+   .articles .slider-nav {
+      bottom: 12px;
+   }
    .article {
       background: url('../images/dist/article-bg-mob-right.svg') right top 170px no-repeat,
-                  url('../images/dist/article-bg-mob-left.svg') left bottom 100px no-repeat;
+                  url('../images/dist/article-bg-mob-left.svg') left bottom 60px no-repeat;
       &__head {
          margin-bottom: 20px;
          background: none !important;
@@ -383,23 +417,23 @@
       }
 
       &__box {
-         margin-bottom: 20px;
+         margin-bottom: 17px;
       }
 
       h2 {
          font-size: 12px;
          line-height: 119.9%;
-         margin-bottom: 12px;
+         margin-bottom: 10px;
       }
 
       h3 {
          font-size: 10px;
          line-height: 119.9%;
-         margin-bottom: 10px;
+         margin-bottom: 8px;
       }
 
       h4,h5,h6 {
-         margin-bottom: 10px;
+         margin-bottom: 8px;
       }
 
       p {
@@ -500,6 +534,7 @@
          &__img {
             width: 35%;
             max-width: 200px;
+            min-width: 80px;
             height: auto;
             position: relative;
             img {
@@ -521,6 +556,7 @@
          img {
             width: 9px;
             height: auto;
+            margin-left: 3px;
          }
          &:last-child {
             img {
@@ -548,8 +584,7 @@
       &__btn {
          display: none;
       }
-      &__slider {
-      }
+      
       &__images {
          
          li {
@@ -576,7 +611,7 @@
       &__list {
          font-size: 11px;
          line-height: 117%;
-         margin-bottom: 23px;
+         margin-bottom: 18px;
       }
       .circle {
          width: 26px;
@@ -598,9 +633,12 @@
       &__info {
          align-items: flex-start;
          flex-direction: column;
+         margin-bottom: 22px;
       }
       &__title {
          margin-bottom: 6px;
+         font-size: 20px;
+         line-height: 24px;
       }
       &__subtitle {
          margin-bottom: 20px;
@@ -610,6 +648,7 @@
       &__text {
          font-size: 11px;
          line-height: 14px;
+         margin-bottom: 17px;
       }
    }
    .projects-page {
@@ -643,9 +682,28 @@
       }
    }
    .steps {
-      background: url('../images/dist/steps-bg-mob-left.svg') left bottom 130px no-repeat;
+      background: url('../images/dist/steps-bg-mob-left.svg') left bottom 120px no-repeat;
+   }
+   .nice-select {
+      font-size: 12px;
    }
    .form {
+      &__item {
+         margin-bottom: 25px;
+         &:last-child {
+            margin-bottom: 20px;
+         }
+         input {
+            font-size: 12px;
+            line-height: 15px;
+         }
+
+         svg {
+            max-width: 12px;
+            max-height: 12px;
+         }
+      }
+      
       &__radio-item {
          font-size: 12px;
          line-height: 15px;
@@ -676,8 +734,16 @@
       }
    }
    .contacts-info-wrapper {
-      background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom no-repeat,
-      url('../images/dist/contacts-bg-mob-right-top.svg') right top 115px no-repeat,
+      background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom 50px no-repeat,
+      url('../images/dist/contacts-bg-mob-right-top.svg') right top 125px no-repeat;
+      .circle {
+         width: 36px;
+         height: 36px;
+         img {
+            max-height: 16px;
+            max-width: 15px;
+         }
+      }
    }
    .contacts {
       padding-top: 70px;
@@ -695,6 +761,15 @@
          line-height: 135%;
          margin: 0;
       }
+
+      .circle {
+         width: 36px;
+         height: 36px;
+         img {
+            max-height: 16px;
+            max-width: 15px;
+         }
+      }
       
       &__content {
          margin-bottom: 25px;
@@ -711,7 +786,9 @@
          }
       }
       &__title {
-         margin-bottom: 35px;
+         margin-bottom: 20px;
+         font-size: 20px;
+         line-height: 140%;
       }
       &__content-head {
          span {
@@ -750,10 +827,14 @@
                   url('../images/dist/about-bg-mob-top.svg') top 90px right no-repeat;
       &__title {
          margin-bottom: 20px;
+         font-size: 25px;
+         line-height: 30px;
       }
       &__text {
          margin-right: 0;
          margin-bottom: 15px;
+         overflow: auto;
+         max-height: 52vh;
       }
       &__boxes {
          display: none;
@@ -771,10 +852,7 @@
    .menu {
       position: fixed;
    }
-   .title {
-      font-size: 27px;
-      line-height: 33px;
-   }
+   
    .services__title {
       font-size: 25px;
       line-height: 30px;
@@ -808,17 +886,40 @@
       line-height: 118.5%;
    }
    .header {
+      &__logo img {
+         width: 100px;
+      }
       &__languages {
          position: absolute;
          left: 32px;
-         bottom: 25px;
+         bottom: 10px;
+      }
+   }
+   .footer {
+      &__item-content {
+         margin-left: auto;
+         margin-right: auto;
+      }
+   }
+   .projects-page {
+      .projects {
+         background: url('../images/dist/portfolio-bg-mob-right.svg') right bottom 73px no-repeat,
+         url('../images/dist/portfolio-bg-mob-left.svg') left top 123px no-repeat;
       }
    }
    .menu {
       left: 15px;
       max-width: 100%;
+      height: 85vh;
       &__head {
          justify-content: flex-end;
+      }
+      &__navigation {
+         font-size: 14px;
+         line-height: 17px;
+         li {
+            margin-bottom: 14px;
+         }
       }
       &__foot {
          display: none;
@@ -826,6 +927,7 @@
    }
    .footer__panel {
       display: flex;
+      z-index: 23;
    }
    .circle {
       width: 31px;
@@ -833,7 +935,7 @@
    }
    .hero {
       background: url('../images/dist/hero-bg-mob-top.svg') top 100px left no-repeat,
-      url('../images/dist/hero-bg-mob-bottom.svg') bottom 121px right no-repeat;
+      url('../images/dist/hero-bg-mob-bottom.svg') bottom 80px right no-repeat;
       &__title {
          margin-bottom: 23px;
       }
@@ -845,7 +947,7 @@
       }
    }
    .services {
-      background: url('../images/dist/services-bg-mob.svg') top 100px right no-repeat;
+      background: url('../images/dist/services-bg-mob.svg') top 80px right no-repeat;
    }
    .container {
       padding: 0 15px;
@@ -859,12 +961,13 @@
       margin: 0 -5px;
    }
    .projects {
+      background: url('../images/dist/projects-bg-tablet.svg') left top 140px / 89px 14px no-repeat;
       &__list {
          margin-left: 9px;
       }
       
       &__slider {
-         padding-top: 60px;
+         padding-top: 44px;
          margin-top: -60px;
       }
       &__title {
@@ -895,6 +998,7 @@
       }
       .swiper-pagination {
          display: flex;
+         bottom: 52px;
       }
       .circle {
          width: 42px;

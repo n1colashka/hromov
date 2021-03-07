@@ -384,6 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initScrollbar() {
         $(".article__content").mCustomScrollbar();
+        $(".about__text").mCustomScrollbar();
     }
 
     function initCursor() {
