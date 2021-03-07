@@ -392,13 +392,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener("mousemove", function(e){
             cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
         });
-        $('.btn, a, button').on('mouseenter', function(e) {
+        $('.btn, a, button, .arrow-prev, .arrow-next').on('mouseenter', function(e) {
             $(cursor).addClass('hovered');
         })
-        $('.btn, a, button').on('mouseleave', function(e) {
+        $('.btn, a, button, .arrow-prev, .arrow-next').on('mouseleave', function(e) {
             $(cursor).removeClass('hovered');
         })
-        $('.btn, a, button').on('click', function(e) {
+        $('.btn, a, button, .arrow-prev, .arrow-next').on('click', function(e) {
             $(cursor).addClass('active');
             setTimeout(() => {
             $(cursor).removeClass('active');

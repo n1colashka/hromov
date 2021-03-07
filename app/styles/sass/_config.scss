@@ -171,6 +171,14 @@ textarea {
 	resize: none;
 }
 
+::-webkit-scrollbar {
+	width: 0px;
+	background: rgba(255, 255, 255, 0.0);
+}
+html {
+	scrollbar-width: none;
+} 
+
 .container {
 	max-width: 1270px;
 	width: 100%;
