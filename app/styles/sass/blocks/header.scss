@@ -1,3 +1,21 @@
+body:not(.main-page) {
+    .header {
+        &__logo,
+        &__phone {
+            display: none;
+        }
+        &__right {
+            .header__languages {
+                display: none;
+            }
+        }
+        &__inner {
+            justify-content: flex-end;
+        }
+    }
+    
+}
+
 .header {
     position: absolute;
     left: 0;
@@ -16,6 +34,9 @@
 
     &__logo {
         display: block;
+        img {
+            width: 130px;
+        }
     }
 
     &__phone {
@@ -137,9 +158,6 @@
                 transform: rotate(-45deg);
             }
         }
-    }
-
-    &__languages {
     }
 
     &__navigation {

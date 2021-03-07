@@ -64,11 +64,16 @@
 
     &__type {
         color: $grey;
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
 .projects-page {
     overflow: hidden;
+    .pagination {
+        padding-top: 33px;
+    }
     .projects {
         background: 
                     url('../images/dist/projects-bg-bottom-right.svg') left 22px bottom no-repeat,

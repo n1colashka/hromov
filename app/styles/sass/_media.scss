@@ -54,6 +54,9 @@
 }
 
 @media (max-width: 1200px) {
+   .about__boxes {
+      margin-right: 0;
+   }
    .contacts {
       &__form {
          margin-left: 20px;
@@ -65,6 +68,7 @@
                   url('../images/dist/steps-bg-left-top.svg') top left no-repeat;
       &__list {
          margin-right: auto;
+         justify-content: flex-start;
       }
    }
    .project {
@@ -316,6 +320,10 @@
 }
 
 @media (max-width: 768px) {
+   .fancybox-slide--html .fancybox-close-small {
+      right: 20px;
+      top: 20px;
+   }
    .hero {
       background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
                   url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
@@ -581,7 +589,7 @@
       }
    }
    .project {
-      background: url('../images/dist/project-bg-mob.svg') right top 223px no-repeat;
+      background: url('../images/dist/project-bg-mob.svg') right top 191px no-repeat;
       padding-bottom: 50px;
       padding-top: 100px;
       .slider-nav {
@@ -1073,4 +1081,50 @@
          padding: 18px 12px;
       }
    }
+}
+
+@media (max-height: 1000px) {
+   .article {
+      background-position: bottom 6px left;
+      &__container {
+         padding-bottom: 40px;
+      }
+   }
+}
+
+@media (max-height: 830px) {
+  
+}
+@media (max-height: 860px) and (min-width: 1025px) {
+   .project {
+      background: url(../images/dist/projects-bg-left.svg) left 12px top no-repeat,url(../images/dist/project-bg-right.svg) right top 114px no-repeat,url(../images/dist/project-bg-bottom.svg) right 41% bottom -20px no-repeat;
+   }
+   .blog-page .articles {
+      background: url(../images/dist/articles-bg-left.svg) left top 155px no-repeat,url(../images/dist/articles-bg-right-top.svg) right top 81px no-repeat,url(../images/dist/articles-bg-right-bottom.svg) right bottom 40px no-repeat;
+   }
+   .articles {
+      background: url(../images/dist/articles-bg-left.svg) left top 190px no-repeat,url(../images/dist/articles-bg-right-top.svg) right top 47px no-repeat,url(../images/dist/articles-bg-right-bottom.svg) right bottom 40px no-repeat;
+   }
+   // .steps {
+   //     background: url('../images/dist/steps-bg-right-top.svg') top 30px right no-repeat,
+   //              url('../images/dist/steps-bg-left-top.svg') top left no-repeat,
+   //              url('../images/dist/steps-bg-left.svg') left top 195px no-repeat;
+   // }
+}
+
+@media (max-height: 600px) {
+   section {
+      align-items: flex-start;
+      padding-top: 23px;
+   }
+   .title {
+      padding-right: 46px;
+   }
+   .hero {
+      padding-top: 130px;
+      &__title {
+         padding-right: 0;
+      }
+   }
+   
 }
