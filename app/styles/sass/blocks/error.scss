@@ -1,0 +1,11 @@
+.error {
+    flex-direction: column;
+    &__title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    &__link {
+        margin-bottom: 45px;
+    }
+}

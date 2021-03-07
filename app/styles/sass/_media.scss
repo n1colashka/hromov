@@ -389,13 +389,21 @@
 }
 
 @media (max-width: 600px) {
-   
    .contacts-form-wrapper {
       background: none;
    }
    .title {
       font-size: 27px;
       line-height: 33px;
+   }
+   .error {
+      &__title {
+         font-size: 20px;
+         line-height: 25px;
+      }
+      &__img img {
+         max-width: 250px;
+      }
    }
    .slider-nav {
       margin-left: 15px;

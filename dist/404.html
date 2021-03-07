@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Статья</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body class="article-page">
+	<div id="modal" class="modal" style="display: none;">
+		<div class="modal__content">
+			<div class="modal__img">
+				<img src="images/dist/thank.svg" alt="">
+			</div>
+			<div class="modal__title">Спасибо за Вашу заявку!</div>
+			<div class="modal__text">
+				Наш менеджер свяжется Вами в ближайшее время
+			</div>
+		</div>
+	</div>
+	<div class="menu-wrapper"></div>
+	<div class="footer__panel">
+		<div class="footer__socials footer__item">
+			<div class="footer__item-content">
+				<ul>
+					<li>
+						<a href="#">
+							<img width="7" src="images/dist/fb.svg" alt="">
+							<span>Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img width="14" src="images/dist/telegram.svg" alt="">
+							<span>Telegram</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img  width="14" src="images/dist/instagram.svg" alt="">
+							<span>Instagram</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__item-head">
+				<span>Мы в соц. сетях</span>
+				<div class="footer__item-icon circle">
+					<img src="images/dist/share.svg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="footer__call footer__item">
+			<div class="footer__item-content">
+				<ul>
+					<li><a href="tel:+38(073)1139719">+ 38 (073) 113 97 19</a></li>
+					<li><a href="tel:+38(073)1139719">+ 38 (073) 113 97 19</a></li>
+				</ul>
+			</div>
+			<div class="footer__item-head">
+				<span>Позвоните нам</span>
+				<div class="footer__item-icon circle">
+					<img src="images/dist/phone.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="./" class="header__logo">
+                <img src="images/dist/logo.png" alt="hromov code">
+            </a>
+            <div class="header__right">
+                <div class="header__languages">
+                    <a href="#" class="active">Ru</a>
+                    <a href="#">En</a>
+                </div>
+                <a class="header__phone" href="tel:+380731139729">+38 (073) 113 97 29</a>
+                <button class="header__menu-btn" data-da="body,600,1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="menu" data-da=".menu-wrapper,600,1">
+                <div class="menu__head">
+                    <div class="header__languages menu__languages">
+                        <a href="#" class="active">Ru</a>
+                        <a href="#">En</a>
+                    </div>
+                    <button class="menu__close">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <nav class="menu__navigation">
+                    <ul>
+                        <li><a href="./">Главная</a></li>
+                        <li><a href="#services">Наши услуги</a></li>
+                        <li><a href="#services">О нас</a></li>
+                        <li><a href="#about">Портфолио</a></li>
+                        <li><a href="#projects">Этапы работы</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__foot">
+                    <div class="menu__foot-title">Телефон для связи:</div>
+                    <a href="tel:+380731139729">+38 (073) 113 97 29</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	<section class="error">
+        <h1 class="error__title title">
+            <span>Ой, что-то пошло н</span>
+                <span class="e-word">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            <span>так</span>
+        </h1>
+        <a href="index.html" class="error__link section__link">
+            <span>Вернуться на главную</span>
+            <img src="images/dist/arrow.svg" alt="">
+        </a>
+        <div class="error__img">
+            <img src="images/dist/404.svg" alt="">
+        </div>
+    </section>
+	
+
+
+	<div class="cursor"></div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+	integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+</html>
