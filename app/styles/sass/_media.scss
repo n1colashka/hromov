@@ -362,6 +362,12 @@
 }
 
 @media (max-width: 700px) {
+   .services {
+      &__item-inner,
+      &__foot {
+         opacity: 1;
+      }
+   }
    .services__item {
       height: 360px;
    }
@@ -615,6 +621,9 @@
       background: url('../images/dist/project-bg-mob.svg') right top 191px no-repeat;
       padding-bottom: 50px;
       padding-top: 100px;
+      &__slider {
+         overflow: visible;
+      }
       .slider-nav {
          display: flex;
          justify-content: center;
@@ -641,6 +650,10 @@
                max-height: 400px;
                width: 100%;
                display: flex;
+            }
+            opacity: 0;
+            &.swiper-slide-visible {
+               opacity: 1;
             }
          }
       }
