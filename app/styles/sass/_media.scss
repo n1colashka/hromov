@@ -85,12 +85,17 @@
 
 
 @media (max-width: 1024px) {
+   
    .steps__slider {
       overflow: visible;
       .swiper-slide {
          opacity: 0;
+
+         &:last-child {
+            opacity: 1;
+         }
       }
-      .swiper-slide-visible {
+      .swiper-slide-visible, .swiper-slide-active {
          opacity: 1;
       }
    }
@@ -334,7 +339,7 @@
       }
       .steps__item {
          width: 100%;
-         margin: 12px;
+         margin: 0;
       }
    }
 }
@@ -1070,7 +1075,7 @@
       }
       &__slider {
          margin-right: -15px;
-         margin-left: -15px;
+         margin-left: 0;
       }
       &__title {
          font-size: 20px;

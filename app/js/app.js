@@ -253,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     el: '.swiper-pagination',
                     type: 'fraction',
                 },
+                spaceBetween: 15,
                 breakpoints: {
                     320: {
                         slidesPerView: 1.5,
