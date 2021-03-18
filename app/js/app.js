@@ -240,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-
     
     function initStepsSlider() {
         if (document.documentElement.clientWidth < 1025) {
@@ -355,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     601: {
                         slidesPerView: 2.5,
-                        spaceBetween: 24,
+                        spaceBetween: 24 ,
                     },
                     1025: {
                         slidesPerView: 4,
@@ -368,13 +367,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initFullPageSlider() {
         
-        
         if (document.documentElement.clientWidth < 1025 && document.documentElement.clientWidth > 600) {
             $('#fullpage').removeClass('swiper-container');
             $('.fullpage-wrapper').removeClass('swiper-wrapper');
-           
         } else {
-            var mySwiper = new Swiper('#fullpage', {
+            var swiper = new Swiper('#fullpage', {
                 direction: 'vertical',
                 hashNavigation: {
                     watchState: true,
@@ -386,6 +383,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 // touchRatio: 0
             });
         }
+        var checkScroll = function(evt){
+            var $slide = $(this),
+                scrollTop = $slide.scrollTop(); 
+            if (scrollTop > 0 && (scrollTop + $slide.height()) < $slide[0].scrollHeight) {
+                evt.stopPropagation();
+            }
+        };
+        
+        var startScroll, touchStart, touchCurrent;
+        swiper.slides.on('touchstart', function (e) {
+            startScroll = this.scrollTop;
+            touchStart = e.targetTouches[0].pageY;
+        }, true);
+        swiper.slides.on('touchmove', function (e) {
+            touchCurrent = e.targetTouches[0].pageY;
+            var touchesDiff = touchCurrent - touchStart;
+            var slide = this;
+            var onlyScrolling = 
+                    ( slide.scrollHeight > slide.offsetHeight ) && //allow only when slide is scrollable
+                    (
+                        ( touchesDiff < 0 && startScroll === 0 ) || //start from top edge to scroll bottom
+                        ( touchesDiff > 0 && startScroll === ( slide.scrollHeight - slide.offsetHeight ) ) || //start from bottom edge to scroll top
+                        ( startScroll > 0 && startScroll < ( slide.scrollHeight - slide.offsetHeight ) ) //start from the middle
+                    );
+            if (onlyScrolling) {
+                e.stopPropagation();
+            }
+        }, true);
     }
 
     function initSelect() {
@@ -402,13 +427,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener("mousemove", function(e){
             cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
         });
-        $('.btn, a, button, .arrow-prev, .arrow-next').on('mouseenter', function(e) {
+        $('.btn, a, button, .arrow-prev, .arrow-next, .form__radio-item').on('mouseenter', function(e) {
             $(cursor).addClass('hovered');
         })
-        $('.btn, a, button, .arrow-prev, .arrow-next').on('mouseleave', function(e) {
+        $('.btn, a, button, .arrow-prev, .arrow-next, .form__radio-item').on('mouseleave', function(e) {
             $(cursor).removeClass('hovered');
         })
-        $('.btn, a, button, .arrow-prev, .arrow-next').on('click', function(e) {
+        $('.btn, a, button, .arrow-prev, .arrow-next, .form__radio-item').on('click', function(e) {
             $(cursor).addClass('active');
             setTimeout(() => {
             $(cursor).removeClass('active');

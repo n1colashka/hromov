@@ -178,12 +178,6 @@
    .contacts {
       padding-top: 25px;
       padding-bottom: 0;
-      
-
-      &__container {
-         overflow: auto;
-         height: 100vh;
-      }
 
       &__content {
          flex-direction: column;
@@ -451,6 +445,12 @@
 }
 
 @media (max-width: 600px) {
+   .contacts {
+      &__container {
+         overflow: auto;
+         height: 100vh;
+      }
+   }
    .footer {
       display: none;
    }
@@ -1159,6 +1159,7 @@
    section {
       align-items: flex-start;
       padding-top: 25px;
+      padding-bottom: 100px;
 
       & > .container {
          height: 100%;
