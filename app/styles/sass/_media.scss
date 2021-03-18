@@ -1159,7 +1159,6 @@
    section {
       align-items: flex-start;
       padding-top: 25px;
-      padding-bottom: 100px;
 
       & > .container {
          height: 100%;
@@ -1174,6 +1173,9 @@
    .swiper-container {
       max-width: 100%;
    }
+   .projects__slider {
+      max-width: none;
+   }
    .articles__slider {
       margin-left: 0;
    }
@@ -1187,6 +1189,7 @@
       flex-direction: column;
       align-items: flex-start;
       height: 100%;
+      padding-bottom: 100px;
    }
    .hero {
       align-items: center;
