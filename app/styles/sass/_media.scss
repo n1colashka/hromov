@@ -5,6 +5,15 @@
          transform: translateX(5px) rotate(180deg);
       }
    }
+   .socials li:hover {
+      circle {
+         // stroke-dasharray: 219.911, 219.911;
+         stroke-dashoffset: 0;
+      }
+   }
+   .btn:hover {
+      box-shadow:13px 17px 24px 7px rgba(#733DFF,.15);
+   }
    .menu__navigation a:hover {
       font-weight: bold;
    }

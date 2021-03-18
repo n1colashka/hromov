@@ -119,14 +119,19 @@ section {
     text-align: center;
 
 	&:focus, &:visited {
-		box-shadow:-23px -23px 24px 7px rgba(255,255,255,255.35);
+		// box-shadow:-23px -23px 24px 7px rgba(#733DFF,.15);
 	}
 	&:active {
-		box-shadow:13px 17px 24px 7px rgba(255,255,255,255.35);
+		// box-shadow:13px 17px 24px 7px rgba(#733DFF,.15);
+	}
+
+	&.clicked {
+		box-shadow:-23px -23px 24px 7px rgba(#733DFF,.15) !important;
 	}
 }
 
 .circle {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -135,6 +140,17 @@ section {
 	background: #F8F8F8;
 	border-radius: 50%;
 	box-shadow: -10px -10px 15px #FFFFFF, 10px 10px 10px rgba(0, 0, 0, 0.08), inset 10px 10px 10px rgba(0, 0, 0, 0.05), inset -10px -10px 20px #FFFFFF;
+	&__border {
+		position: absolute;
+		left: -3px;
+		top: -3px;
+		
+		circle {
+			stroke-dashoffset: calc(2 * 3.14 * 24);
+			stroke-dasharray: calc(2 * 3.14 * 24);
+			transition: .4s ease-in-out;
+		}
+	}
 }
 
 ul,  li {
@@ -210,6 +226,11 @@ html, body {
 .socials {
 	display: flex;
 	align-items: center;
+
+	a {
+		position: relative;
+	}
+	
 
 	li + li {
 		margin-left: 13px;
