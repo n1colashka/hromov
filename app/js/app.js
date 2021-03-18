@@ -379,10 +379,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 speed: 1000,
                 mousewheel: {
                     invert: false,
+                    releaseOnEdges: true,
                 },
                 // touchRatio: 0
+                touchReleaseOnEdges: true,
             });
         }
+        document.body.addEventListener("touchstart", function() {
+            
+        });
     }
 
     function initSelect() {
