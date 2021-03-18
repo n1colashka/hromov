@@ -1,7 +1,7 @@
 .services {
     background: url('../images/dist/services-bg-right-top.svg') top 20px right no-repeat,
-    url('../images/dist/services-bg-right-bottom.svg') bottom right no-repeat,
-    url('../images/dist/services-bg-left.svg') bottom left 17px no-repeat;
+    url('../images/dist/services-bg-right-bottom.svg') bottom 32px right no-repeat,
+    url('../images/dist/services-bg-left.svg') bottom left 25px no-repeat;
     
 
     &__title {
@@ -10,7 +10,7 @@
     }
 
     &__slider {
-        padding-top: 50px;
+        padding-top: 72px;
         overflow: visible;
     }
 

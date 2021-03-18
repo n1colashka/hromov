@@ -1,7 +1,18 @@
+.projects-page {
+    .projects {
+        align-items: flex-start;
+        padding-top: 50px;
+        &__title {
+            margin-bottom: 14px;
+        }
+    }
+}
 .projects {
     background: url('../images/dist/projects-bg-left.svg') left 13px top / 56px 100%  no-repeat,
         url('../images/dist/projects-bg-top-right.svg') right  top 40px no-repeat,
         url('../images/dist/projects-bg-bottom-right.svg') right 30px bottom no-repeat;
+    padding-top: 50px;
+    align-items: flex-start;
 
     &__title {
         margin-bottom: 30px;
@@ -67,6 +78,7 @@
         color: $grey;
         font-size: 16px;
         line-height: 20px;
+        font-weight: 100;
     }
 }
 
@@ -78,7 +90,7 @@
     .projects {
         background: 
                     url('../images/dist/projects-bg-bottom-right.svg') left 22px bottom no-repeat,
-                    url('../images/dist/projects-bg-top-right.svg') right top 40px no-repeat,
+                    url('../images/dist/projects-page-bg.svg') right top 28px no-repeat,
                     url('../images/dist/projects-bg-bottom-right.svg') right 30px bottom no-repeat;
     }
     .projects__link {

@@ -18,11 +18,11 @@ html {
 }
 
 html, body { 
-	// overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
+	position: relative;
 	min-width: 320px;
     min-height: 100%;
     font-family: 'Montserrat', sans-serif;
@@ -153,6 +153,12 @@ h1,h2,h3,h4,h5,h6 {
 
 // Input number fix
 
+input {
+	outline: none;
+	border: none;
+	border-radius: 0;
+}
+
 input[type='number'] {
 	-moz-appearance:textfield;
 }
@@ -188,6 +194,10 @@ a {
 	color: inherit;
 }
 
+html, body {
+	overflow-x: hidden;
+}
+
 
 .overflow-hidden {
 	overflow: hidden;
@@ -206,6 +216,10 @@ a {
 	}
 }
 
+.display-flex {
+	display: flex !important;
+}
+
 .mCSB_scrollTools .mCSB_draggerRail {
 	opacity: 0;
 }
@@ -213,6 +227,7 @@ a {
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
 	background: linear-gradient(327.56deg, #5D24D6 19.23%, #7E74ED 81.76%);
 	box-shadow: 0px 2px 3px rgba(43, 72, 180, 0.4), inset 1px 1px 3px rgba(255, 255, 255, 0.4);
+	border-radius: 0;
 }
 
 .mCSB_scrollTools .mCSB_draggerContainer {
@@ -228,13 +243,14 @@ a {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		font-weight: 500;
+		font-weight: 100;
         img {
 			flex-shrink: 0;
             transform: rotate(180deg);
 			margin-left: 8px;
 			margin-top: 3px;
 			width: 20px;
+			transition: .3s ease-in-out;
         }
     }
 }
@@ -259,11 +275,15 @@ a {
 
 .slider-prev,
 .slider-next {
-	width: 42px;
+	width: 47px;
 	transform: rotate(180deg);
 	cursor: pointer;
 	outline: none;
 
+	svg {
+		width: 47px;
+		height: auto;
+	}
 
 	svg, path {
 		transition: .3s ease;
@@ -319,7 +339,7 @@ a {
 	padding: 50px;
 	background: #F9F9F9;
 	border: 1px solid #FFFFFF;
-	max-height: 500px;
+	max-height: 470px;
 	height: 100%;
 	box-shadow: 0px 15px 40px rgba(54, 48, 116, 0.2);
 	text-align: center;
@@ -331,7 +351,7 @@ a {
 		transform: translate(-50%,-50%);
 	}
 	&__img {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		text-align: center;
 		img {
 			margin: 0 auto;
@@ -353,6 +373,11 @@ a {
 	}
 }
 
+.fancybox-is-open .fancybox-bg {
+	background-color: #000;
+	opacity: .55;
+}
+
 .pagination {
 	position: relative;
 	z-index: 4;
@@ -360,10 +385,7 @@ a {
 	align-items: center;
 	padding-top: 27px;
 
-	&__arrow svg {
-		width: 16px;
-		height: 5px;
-	}
+	
 	li {
 		margin-left: 5px;
 		margin-right: 5px;

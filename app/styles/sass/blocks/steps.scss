@@ -1,7 +1,10 @@
 .steps {
     background: url('../images/dist/steps-bg-right-top.svg') top 30px right no-repeat,
                 url('../images/dist/steps-bg-left-top.svg') top left no-repeat,
+                url('../images/dist/steps-bg-right-bottom.svg') bottom 0 right 12px no-repeat,
                 url('../images/dist/steps-bg.svg') left bottom no-repeat;
+    padding-top: 50px;
+    align-items: flex-start;
 
     &__list {
         display: flex;
@@ -9,6 +12,11 @@
         margin-left: auto;
         max-width: 675px;
         justify-content: flex-end;
+    }
+
+    &__icon {
+        width: 47px;
+        height: 47px;
     }
 
     &__item {
@@ -28,10 +36,10 @@
         font-weight: bold;
         font-size: 70px;
         line-height: 1;
-        background: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
+        background: linear-gradient(272.84deg, #380085 60%, #733DFF 95%, #733DFF 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: -15px;
+        margin-bottom: -17px;
         margin-left: 7px;
     }
 
@@ -40,7 +48,7 @@
         background: #F9F9F9;
         box-shadow: 0px 18px 60px rgba(54, 48, 116, 0.2);
         border: 1px solid #FFFFFF;
-        min-height: 210px;
+        min-height: 240px;
         padding-bottom: 40px;
     }
 
@@ -53,7 +61,7 @@
     }
 
     &__title {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .swiper-pagination {
@@ -87,6 +95,7 @@
     &__text {
         color: $grey;
         font-size: 14px;
-        line-height: 17px;
+        font-weight: 100;
+        line-height: 125%;
     }
 }

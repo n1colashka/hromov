@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const menuBtn = document.querySelector('.header__menu-btn');
         const menuClose = document.querySelector('.menu__close');
         const menu = document.querySelector('.menu');
+        const header = document.querySelector('.header');
         const html = document.querySelector('html');
 
         menu.querySelectorAll('.menu__navigation a').forEach(link => {
@@ -17,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.add('active');
         })
         menuClose.addEventListener('click', function() {
-            menu.classList.remove('active');
             menuClose.classList.remove('active');
+            menu.classList.remove('active');
         })
     }
     function initDynamicAdapt() {
@@ -286,9 +287,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function initServicesSlider() {
         var mySwiper = new Swiper('.services__slider', {
             watchSlidesVisibility: true,
-            slidesPerView: 3,
+            slidesPerView: 1,
             centeredSlides: true,
-            initialSlide: 2,
+            initialSlide: 0,
             navigation: {
                 nextEl: '.slider-next',
                 prevEl: '.slider-prev',
@@ -302,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 701: {
                     centeredSlides: true,
-                    initialSlide: 2,
+                    initialSlide: 1,
                     spaceBetween: 0,
                     slidesPerView: 3,
                 },
@@ -350,9 +351,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 breakpoints: {
                     320: {
                         slidesPerView: 1.5,
+                        spaceBetween: 15,
                     },
                     601: {
                         slidesPerView: 2.5,
+                        spaceBetween: 24,
                     },
                     1025: {
                         slidesPerView: 4,
@@ -364,21 +367,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initFullPageSlider() {
-        if (document.documentElement.clientWidth < 1025) {
-            $('.contacts-info-wrapper').addClass('swiper-slide');
-            $('.contacts-form-wrapper').addClass('swiper-slide');
+        
+        
+        if (document.documentElement.clientWidth < 1025 && document.documentElement.clientWidth > 600) {
+            $('#fullpage').removeClass('swiper-container');
+            $('.fullpage-wrapper').removeClass('swiper-wrapper');
+           
+        } else {
+            var mySwiper = new Swiper('#fullpage', {
+                direction: 'vertical',
+                hashNavigation: {
+                    watchState: true,
+                },
+                speed: 1000,
+                mousewheel: {
+                    invert: false,
+                },
+                // touchRatio: 0
+            });
         }
-        var mySwiper = new Swiper('#fullpage', {
-            direction: 'vertical',
-            hashNavigation: {
-                watchState: true,
-            },
-            speed: 1000,
-            mousewheel: {
-                invert: false,
-            },
-            // touchRatio: 0
-        });
     }
 
     function initSelect() {

@@ -1,5 +1,6 @@
 .project {
     padding-top: 50px;
+    align-items: flex-start;
     background: url('../images/dist/projects-bg-left.svg') left 12px top no-repeat,
                 url('../images/dist/project-bg-right.svg') right top 153px no-repeat,
                 url('../images/dist/project-bg-bottom.svg') right 43% bottom no-repeat;
@@ -30,6 +31,7 @@
         margin-bottom: 30px;
         font-size: 14px;
         line-height: 17px;
+        font-weight: 100;
         color: $grey;
     }
 
@@ -38,6 +40,10 @@
         font-size: 14px;
         line-height: 17px;
         margin-bottom: 30px;
+        b {
+            font-weight: 600;
+        }
+
         span {
             color: $grey;
             font-weight: normal;
@@ -48,6 +54,10 @@
                 margin-bottom: 0;
             }
         }
+    }
+
+    &__title {
+        margin-bottom: 5px;
     }
 
     &__info {

@@ -25,6 +25,7 @@
     &__text {
         margin-bottom: 55px;
         color: $grey;
+        font-weight: 100;
     }
 
     &__content {
@@ -42,6 +43,7 @@
             display: block;
             color: $grey;
             margin-bottom: 7px;
+            font-weight: 100;
             &:last-child {
                 margin-bottom: 0;
             }
@@ -109,6 +111,10 @@
         line-height: 134.4%;
     }
 
+    .nice-select:after {
+        right: 8px;
+    }
+
     &__wrapper {
         border: 1px solid #FFFFFF;
     }
@@ -128,9 +134,15 @@
         cursor: pointer;
         margin-left: -5px;
 
+        &:last-child {
+            svg {
+                right: 3px;
+            }
+        }
+
         svg {
             position: absolute;
-            right: 0;
+            right: 5px;
             top: 0;
         }
 
@@ -205,6 +217,7 @@
             margin-bottom: 14px;
             font-size: 14px;
             line-height: 17px;
+            margin-left: -3px;
         }
         label {
             cursor: pointer;

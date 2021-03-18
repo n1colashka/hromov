@@ -1,5 +1,10 @@
 @media (min-width: 1025px) {
    // Hover section
+   .section__link:hover {
+      img {
+         transform: translateX(5px) rotate(180deg);
+      }
+   }
    .menu__navigation a:hover {
       font-weight: bold;
    }
@@ -85,7 +90,18 @@
 
 
 @media (max-width: 1024px) {
+   .footer {
+      display: none;
+   }
    
+   .error {
+      background: 
+                  url('../images/dist/error-bg-bottom-right.svg') right 50px bottom 0 no-repeat;
+      &__img {
+         margin-right: 50px;
+      }
+   }
+
    .steps__slider {
       overflow: visible;
       .swiper-slide {
@@ -158,9 +174,16 @@
          url('../images/dist/portfolio-bg-tablet-left.svg') left top 203px no-repeat;
       }
    }
+   
    .contacts {
-      display: none;
       padding-top: 25px;
+      padding-bottom: 0;
+      
+
+      &__container {
+         overflow: auto;
+         height: 100vh;
+      }
 
       &__content {
          flex-direction: column;
@@ -204,15 +227,8 @@
          align-items: flex-start;
       }
    }
-   .contacts-form-wrapper, .contacts-info-wrapper {
-      display: flex;
-      .container {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-      }
-   }
-  
+   
+
    .articles {
       background: url('../images/dist/articles-bg-tablet-top-right.svg') top 30px right no-repeat,
                   url('../images/dist/articles-bg-tablet-top-left.svg') top 100px left no-repeat,
@@ -342,6 +358,11 @@
          margin: 0;
       }
    }
+   .hero {
+      background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
+                  url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
+                  url('../images/dist/hero-bg-tablet-bottom-right.svg') bottom 55px right no-repeat;
+   }
 }
 
 @media (max-width: 768px) {
@@ -349,11 +370,7 @@
       right: 20px;
       top: 20px;
    }
-   .hero {
-      background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
-                  url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
-                  url('../images/dist/hero-bg-tablet-bottom-right.svg') bottom 55px right no-repeat;
-   }
+  
    .header {
       &__right  {
          a,
@@ -367,6 +384,9 @@
 }
 
 @media (max-width: 700px) {
+   .error {
+      background: none;
+   }
    .services {
       &__item-inner,
       &__foot {
@@ -431,6 +451,12 @@
 }
 
 @media (max-width: 600px) {
+   .footer {
+      display: none;
+   }
+   .error__img {
+      margin-right: 30px;
+   }
    .contacts-form-wrapper {
       background: none;
    }
@@ -619,7 +645,8 @@
    .slider-prev {
       width: auto;
       svg {
-         width: 24px;
+         // width: 24px;
+         width: 30px;
       }
    }
    .project {
@@ -790,9 +817,9 @@
          }
       }
    }
-   .contacts-info-wrapper {
-      background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom 50px no-repeat,
-      url('../images/dist/contacts-bg-mob-right-top.svg') right top 125px no-repeat;
+   .contacts {
+      padding-top: 25px;
+      background: url('../images/dist/contacts-bg-mob-right-top.svg') right top 65px no-repeat;
       .circle {
          width: 36px;
          height: 36px;
@@ -801,9 +828,10 @@
             max-width: 15px;
          }
       }
-   }
-   .contacts {
-      padding-top: 70px;
+
+      &__info {
+         background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom 0 no-repeat;
+      }
 
       .current {
          color: $black;
@@ -856,6 +884,7 @@
    }
    .form {
       max-width: 100%;
+      margin-bottom: 0;
       &__item {
          input {
             &::placeholder {
@@ -1056,7 +1085,7 @@
       }
       .swiper-pagination {
          display: flex;
-         bottom: 52px;
+         bottom: 37px;
       }
       .circle {
          width: 42px;
@@ -1081,6 +1110,7 @@
          font-size: 20px;
          line-height: 24px;
       }
+      padding-top: 25px;
    }
    .section__link img {
       margin-top: 0;
@@ -1126,6 +1156,53 @@
          padding: 18px 12px;
       }
    }
+   section {
+      align-items: flex-start;
+      padding-top: 25px;
+
+      & > .container {
+         height: 100%;
+      }
+   }
+   .hero .container {
+      height: auto;
+   }
+   .services__slider {
+      padding-bottom: 50px;
+   }
+   .swiper-container {
+      max-width: 100%;
+   }
+   .articles__slider {
+      margin-left: 0;
+   }
+   .services__inner,
+   .steps__inner,
+   .projects__inner,
+   .articles__inner,
+   .about__inner {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+   }
+   .hero {
+      align-items: center;
+   }
+   .projects {
+      padding-top: 25px;
+   }
+   .steps__title,
+   .services__title,
+   .about__title,
+   .projects__title,
+   .articles__title {
+      padding-right: 50px;
+   }
+   .form {
+      margin-bottom: 80px;
+   }
 }
 
 @media (max-height: 1000px) {
@@ -1137,24 +1214,16 @@
    }
 }
 
-@media (max-height: 830px) {
-  
-}
 @media (max-height: 860px) and (min-width: 1025px) {
    .project {
       background: url(../images/dist/projects-bg-left.svg) left 12px top no-repeat,url(../images/dist/project-bg-right.svg) right top 114px no-repeat,url(../images/dist/project-bg-bottom.svg) right 41% bottom -20px no-repeat;
    }
    .blog-page .articles {
-      background: url(../images/dist/articles-bg-left.svg) left top 155px no-repeat,url(../images/dist/articles-bg-right-top.svg) right top 81px no-repeat,url(../images/dist/articles-bg-right-bottom.svg) right bottom 40px no-repeat;
+      background: url(../images/dist/articles-bg-left.svg) left top 155px no-repeat,url(../images/dist/articles-bg-right-top.svg) right top 41px no-repeat,url(../images/dist/articles-bg-right-bottom.svg) right bottom 40px no-repeat;
    }
    .articles {
       background: url(../images/dist/articles-bg-left.svg) left top 190px no-repeat,url(../images/dist/articles-bg-right-top.svg) right top 47px no-repeat,url(../images/dist/articles-bg-right-bottom.svg) right bottom 40px no-repeat;
    }
-   // .steps {
-   //     background: url('../images/dist/steps-bg-right-top.svg') top 30px right no-repeat,
-   //              url('../images/dist/steps-bg-left-top.svg') top left no-repeat,
-   //              url('../images/dist/steps-bg-left.svg') left top 195px no-repeat;
-   // }
 }
 
 @media (max-height: 600px) {
@@ -1172,4 +1241,14 @@
       }
    }
    
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+   .page-wrapper {
+      height: auto;
+   }
+   section {
+      height: 100%;
+      padding: 50px 0;
+   }
 }

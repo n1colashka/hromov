@@ -1,4 +1,9 @@
 body:not(.main-page) {
+    &:not(.article-page) {
+        .header {
+            padding-top: 57px;
+        }
+    }
     .header {
         &__logo,
         &__phone {
@@ -16,10 +21,19 @@ body:not(.main-page) {
     
 }
 
+.article-page {
+    .header__menu-btn {
+        span {
+            background-color: #fff;
+        }
+    }
+}
+
 .header {
     position: absolute;
     left: 0;
-    right: 0;
+    right: auto;
+    width: 100%;
     top: 0;
     padding-top: 33px;
     padding-bottom: 10px;
@@ -120,7 +134,7 @@ body:not(.main-page) {
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     box-shadow: 0px 40px 60px rgba(54, 48, 116, 0.3);
-    transform: scale(0);
+    transform: translateX(120%);
     transition: .4s ease-in-out;
     height: 90vh;
     padding: 33px;
@@ -129,7 +143,7 @@ body:not(.main-page) {
     width: 100%;
 
     &.active {
-        transform: scale(1);
+        transform: translateX(0);
     }
     &__head {
         display: flex;
