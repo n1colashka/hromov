@@ -445,6 +445,10 @@
 }
 
 @media (max-width: 600px) {
+   .form__radio>span {
+      font-size: 12px;
+      line-height: 15px;
+   }
    .contacts {
       &__container {
          overflow: auto;
