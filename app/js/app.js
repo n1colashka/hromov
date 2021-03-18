@@ -381,8 +381,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     invert: false,
                     releaseOnEdges: true,
                 },
-                // touchRatio: 0
                 touchReleaseOnEdges: true,
+                touchStartForcePreventDefault: true,
             });
         }
         document.body.addEventListener("touchstart", function() {

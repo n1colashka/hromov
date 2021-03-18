@@ -832,7 +832,7 @@
    }
    .contacts {
       padding-top: 25px;
-      background: url('../images/dist/contacts-bg-mob-right-top.svg') right top 65px no-repeat;
+      background: none;
       .circle {
          width: 36px;
          height: 36px;
@@ -843,7 +843,8 @@
       }
 
       &__info {
-         background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom 0 no-repeat;
+         background: url('../images/dist/contacts-bg-mob-right.svg') right 30px bottom 0 no-repeat,
+         url('../images/dist/contacts-bg-mob-right-top.svg') right top 55px no-repeat;;
       }
 
       .current {
