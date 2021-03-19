@@ -1286,6 +1286,19 @@
    
 }
 
+@media (max-height: 550px) {
+   .page-wrapper {
+      height: auto;
+   }
+   section {
+      height: 100%;
+      padding: 50px 0;
+   }
+   .article {
+      padding-top: 0;
+   }
+}
+
 @media (min-width: 601px) and (max-width: 1024px) {
    .page-wrapper {
       height: auto;
