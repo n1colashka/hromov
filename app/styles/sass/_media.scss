@@ -464,6 +464,9 @@
 }
 
 @media (max-width: 600px) {
+   .about__content {
+      padding-bottom: 50px;
+   }
    .btn:active {
 		transform: scale(1.05);
 	}
