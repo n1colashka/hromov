@@ -2,6 +2,8 @@
     .projects {
         align-items: flex-start;
         padding-top: 50px;
+        padding-bottom: 50px;
+        height: auto;
         &__title {
             margin-bottom: 14px;
         }
@@ -33,6 +35,18 @@
         width: calc(25% - 16px);
         margin-left: 8px;
         margin-right: 8px;
+    }
+
+    &__slider {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        opacity: 0;
+    }
+
+    .swiper-slide-visible {
+        opacity: 1;
     }
 
     &__img {

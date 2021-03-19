@@ -99,6 +99,14 @@
 
 
 @media (max-width: 1024px) {
+   .projects-page {
+      .projects__title {
+         margin-bottom: 30px;
+      }
+      .projects__slider {
+         margin-left: -18px;
+      }
+   }
    .footer {
       display: none;
    }
@@ -453,6 +461,27 @@
 }
 
 @media (max-width: 600px) {
+   .projects-page {
+      .projects__slider {
+         margin-left: 0;
+      }
+      .projects__list {
+         margin-left: 0;
+      }
+   } 
+   .article-page .header__menu-btn span {
+      background-color: #333;
+   }
+   .blog__list {
+      .articles__item {
+         &:nth-child(4) ~ .articles__item {
+            display: none;
+         } 
+      }
+   }
+   .projects-page .projects {
+      padding-top: 25px;
+   }
    .form__radio>span {
       font-size: 12px;
       line-height: 15px;
@@ -560,9 +589,26 @@
       .articles {
          background: url('../images/dist/blog-bg-mob-right-top.svg') top 85px right no-repeat,
                      url('../images/dist/blog-bg-mob-right-bottom.svg') bottom 95px right no-repeat;
-         height: auto;
+         padding: 0;
+         padding-top: 50px;
          overflow: auto;
-         padding-bottom: 100px;
+
+         &__img {
+            width: 35%;
+            max-width: 200px;
+            min-width: 80px;
+            height: auto;
+            position: relative;
+            img {
+               position: absolute;
+               left: 0;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               height: 100%;
+               width: 100%;
+            }
+         }
          &__title {
             display: none;
          }
@@ -614,28 +660,6 @@
             justify-content: flex-start;
          }
       }
-
-      .articles {
-         &__inner {
-            margin-top: 100px;
-         }
-         &__img {
-            width: 35%;
-            max-width: 200px;
-            min-width: 80px;
-            height: auto;
-            position: relative;
-            img {
-               position: absolute;
-               left: 0;
-               top: 0;
-               right: 0;
-               bottom: 0;
-               height: 100%;
-               width: 100%;
-            }
-         }
-      }
    }
    .breadcrumbs {
       li {
@@ -664,7 +688,8 @@
    .project {
       background: url('../images/dist/project-bg-mob.svg') right top 191px no-repeat;
       padding-bottom: 50px;
-      padding-top: 100px;
+      padding-top: 25px;
+
       &__slider {
          overflow: visible;
       }
@@ -1268,4 +1293,8 @@
       height: 100%;
       padding: 50px 0;
    }
+   .article {
+      padding-top: 0;
+   }
+   
 }
