@@ -401,13 +401,12 @@
    }
    .services .slider-nav {
       margin-left: 0;
+      margin-top: 0;
    }
    .services__item-inner {
       padding: 15px 12px;
    }
-   .services .slider-nav {
-      margin-top: 15px;
-   }
+   
    .services__name {
       font-size: 13px;
       line-height: 98.9%;
@@ -1146,7 +1145,7 @@
       }
       .slider-nav {
          justify-content: center;
-         margin-top: 20px;
+         margin-top: 7px;
          top: auto;
       }
       &__text {
@@ -1254,7 +1253,6 @@
       padding-right: 46px;
    }
    .hero {
-      padding-top: 130px;
       &__title {
          padding-right: 0;
       }
