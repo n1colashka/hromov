@@ -1070,6 +1070,7 @@
    .hero {
       background: url('../images/dist/hero-bg-mob-top.svg') top 100px left no-repeat,
       url('../images/dist/hero-bg-mob-bottom.svg') bottom 80px right no-repeat;
+      padding-top: 50px;
       &__title {
          margin-bottom: 23px;
       }
