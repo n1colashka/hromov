@@ -193,6 +193,10 @@ body:not(.main-page) {
         a {
             font-weight: 600;
         }
+
+        .menu__languages {
+            display: none;
+        }
     }
 
     &__foot-title {

@@ -1019,12 +1019,7 @@
       &__logo img {
          width: 100px;
       }
-      &__languages {
-         position: absolute;
-         left: 32px;
-         bottom: 10px;
-         z-index: 10;
-      }
+      
    }
    .footer {
       &__item-content {
@@ -1041,8 +1036,14 @@
    .menu {
       left: 15px;
       max-width: 100%;
+      .header__languages {
+         display: flex;
+      }
       &__head {
          justify-content: flex-end;
+         .header__languages {
+            display: none;
+         }
       }
       &__navigation {
          font-size: 14px;
@@ -1286,18 +1287,18 @@
    
 }
 
-@media (max-height: 550px) {
-   .page-wrapper {
-      height: auto;
-   }
-   section {
-      height: 100%;
-      padding: 50px 0;
-   }
-   .article {
-      padding-top: 0;
-   }
-}
+// @media (max-height: 550px) {
+//    .page-wrapper {
+//       height: auto;
+//    }
+//    section {
+//       height: 100%;
+//       padding: 50px 0;
+//    }
+//    .article {
+//       padding-top: 0;
+//    }
+// }
 
 @media (min-width: 601px) and (max-width: 1024px) {
    .page-wrapper {
