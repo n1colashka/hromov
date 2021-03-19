@@ -115,7 +115,7 @@ section {
     background: linear-gradient(272.84deg, #380085 3.58%, #733DFF 100%, #733DFF 100%);
 	box-shadow: 5px 5px 15px rgba(111, 57, 248, 0.38), 10px 10px 15px rgba(255, 255, 255, 0.38);
     color: #fff;
-	transition: .2s ease-in;
+	transition: all .3s ease-in;
     text-align: center;
 
 	&:focus, &:visited {
@@ -123,6 +123,7 @@ section {
 	}
 	&:active {
 		// box-shadow:13px 17px 24px 7px rgba(#733DFF,.15);
+		transform: scale(1.1);
 	}
 
 	&.clicked {
@@ -230,10 +231,15 @@ html, body {
 	a {
 		position: relative;
 	}
-	
 
 	li + li {
 		margin-left: 13px;
+	}
+
+	li {
+		.circle__border circle {
+			opacity: 0;
+		}
 	}
 }
 

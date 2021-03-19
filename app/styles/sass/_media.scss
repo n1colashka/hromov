@@ -7,8 +7,8 @@
    }
    .socials li:hover {
       circle {
-         // stroke-dasharray: 219.911, 219.911;
          stroke-dashoffset: 0;
+         opacity: 1;
       }
    }
    .btn:hover {
@@ -99,6 +99,9 @@
 
 
 @media (max-width: 1024px) {
+   .circle__border {
+      display: none;
+   }
    .projects-page {
       .projects__title {
          margin-bottom: 30px;
