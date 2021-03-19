@@ -464,6 +464,9 @@
 }
 
 @media (max-width: 600px) {
+   .btn:active {
+		transform: scale(1.05);
+	}
    .projects__img {
       max-height: 350px;
    }

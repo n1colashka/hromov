@@ -426,7 +426,14 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    
+    $(window).on('orientationchange', function() {
+        if (window.orientation != 0) {
+            document.getElementById('block_land').style.display = 'flex';
+        } else {
+            document.getElementById('block_land').style.display = 'none';
+        }
+    });
+
     initMenu();
     initDynamicAdapt();
     initStepsSlider();
