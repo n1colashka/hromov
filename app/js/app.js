@@ -368,25 +368,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function initFullPageSlider() {
         
         if (document.documentElement.clientWidth < 1025 && document.documentElement.clientWidth > 600) {
-            $('#fullpage').removeClass('swiper-container');
-            $('.fullpage-wrapper').removeClass('swiper-wrapper');
+            
         } else {
-            var swiper = new Swiper('#fullpage', {
-                direction: 'vertical',
-                hashNavigation: {
-                    watchState: true,
-                },
-                speed: 1000,
-                mousewheel: {
-                    invert: false,
-                    releaseOnEdges: true,
-                },
-                touchReleaseOnEdges: true,
+            $('#fullpage').fullpage({
+                scrollOverflow:true
             });
         }
-        document.body.addEventListener("touchstart", function() {
-            
-        });
     }
 
     function initSelect() {

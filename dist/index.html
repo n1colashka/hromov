@@ -12,6 +12,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/fullpage.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -75,8 +76,8 @@
 			</div>
 		</div>
 	</div>
-	<div id="fullpage" class="page-wrapper swiper-container">
-		<div class="swiper-wrapper fullpage-wrapper">
+	<div id="fullpage" class="page-wrapper">
+		<div class="fullpage-wrapper">
 			<header class="header">
     <div class="container">
         <div class="header__inner">
@@ -113,12 +114,12 @@
     <nav class="menu__navigation">
         <ul>
             <li><a href="./">Главная</a></li>
-            <li><a href="#services">Наши услуги</a></li>
-            <li><a href="#services">О нас</a></li>
-            <li><a href="#about">Портфолио</a></li>
-            <li><a href="#projects">Этапы работы</a></li>
+            <li><a href="#services" data-menuanchor="services">Наши услуги</a></li>
+            <li><a href="#about" data-menuanchor="about">О нас</a></li>
+            <li><a href="#projects" data-menuanchor="projects">Портфолио</a></li>
+            <li><a href="#steps" data-menuanchor="steps">Этапы работы</a></li>
             <li><a href="blog.html">Блог</a></li>
-            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#contacts" data-menuanchor="contacts">Контакты</a></li>
         </ul>
     </nav>
     <div class="header__languages menu__languages menu__foot-languages">
@@ -130,7 +131,7 @@
         <a href="tel:+380731139729">+38 (073) 113 97 29</a>
     </div>
 </div>
-			<section class="swiper-slide hero" data-hash="hero">
+			<section class="section hero" data-anchor="hero">
 				<div class="container">
 					<div class="hero__inner">
 						<div class="hero__content">
@@ -198,7 +199,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="swiper-slide services" data-hash="services">
+			<section class="section services" data-anchor="services">
 				<div class="container">
 					<h1 class="services__title title"><span class="n-word">Н</span>аши услуги</h1>
 					<div class="services__inner">
@@ -307,7 +308,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="about swiper-slide" data-hash="about">
+			<section class="section about" data-anchor="about">
 				<div class="container">
 					<h1 class="about__title title">
 						<span>Кто мы таки</span>
@@ -349,7 +350,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="projects swiper-slide" data-hash="projects">
+			<section class="section projects" data-anchor="projects">
 				<div class="container">
 					<h1 class="projects__title title">
 						<span>Последни</span>
@@ -405,7 +406,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="steps swiper-slide" data-hash="steps">
+			<section class="section steps" data-anchor="steps">
 				<div class="container">
 					<h1 class="steps__title title">
 						<span>Основны</span>
@@ -481,7 +482,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="articles swiper-slide" data-hash="articles">
+			<section class="section articles" data-anchor="articles">
 				<div class="container">
 					<h1 class="articles__title title">
 						<span>Интер</span>
@@ -662,7 +663,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="contacts " data-hash="contacts" id="sl-m">
+			<section class="section contacts" data-anchor="contacts">
 				<div class="container contacts__container">
 					<div class="contacts__inner">
 						<div class="contacts__info" data-hash="info">
@@ -866,6 +867,8 @@
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
+	<script src="js/fullpage.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 </html>
