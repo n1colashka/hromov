@@ -371,7 +371,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
         } else {
             $('#fullpage').fullpage({
-                scrollOverflow:true
+                scrollOverflow:true,
+                paddingTop: '25px',
             });
         }
     }

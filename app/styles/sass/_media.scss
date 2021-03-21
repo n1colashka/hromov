@@ -100,6 +100,9 @@
 
 
 @media (max-width: 1024px) {
+   .project__left {
+      margin-right: 0;
+   }
    .circle__border {
       display: none;
    }
@@ -498,6 +501,17 @@
    }
    .projects-page .projects {
       padding-top: 25px;
+      .container {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         height: 100%;
+         min-height: 100vh;
+      }
+      &__inner {
+         margin-top: auto;
+         margin-bottom: auto;
+      }
    }
    .form__radio>span {
       font-size: 12px;
@@ -697,7 +711,7 @@
       }
    }
    .project {
-      background: url('../images/dist/project-bg-mob.svg') right top 191px no-repeat;
+      background: url('../images/dist/project-bg-mob.svg') right top 119px no-repeat;
       padding-bottom: 50px;
       padding-top: 25px;
 
@@ -1167,7 +1181,7 @@
    .articles {
       background: url('../images/dist/articles-bg-mob.svg') top 69px left no-repeat;
       &__inner {
-         padding-top: 50px;
+         padding-top: 0;
       }
       &__title {
          font-size: 20px;
@@ -1210,11 +1224,16 @@
    }
    section {
       align-items: flex-start;
-      padding-top: 25px;
 
-      & > .container {
+      .container {
          height: 100%;
       }
+   }
+   .fp-scroller {
+      height: 100%;
+   }
+   .contacts .fp-scroller {
+      height: auto;
    }
    .hero .container {
       height: auto;
@@ -1236,15 +1255,13 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: flex-start;
+      // align-items: flex-start;
       height: 100%;
+      max-width: 100%;
       padding-bottom: 100px;
    }
    .hero {
       align-items: center;
-   }
-   .projects {
-      padding-top: 25px;
    }
    .steps__title,
    .services__title,
@@ -1256,15 +1273,6 @@
    }
    .form {
       margin-bottom: 80px;
-   }
-}
-
-@media (max-height: 1000px) {
-   .article {
-      // background-position: bottom 6px left;
-      &__container {
-         // padding-bottom: 40px;
-      }
    }
 }
 
@@ -1281,6 +1289,12 @@
 }
 
 @media (max-height: 600px) {
+   .projects-page {
+      .projects {
+         background: url('../images/dist/portfolio-bg-mob-right.svg') right bottom 73px no-repeat,
+         url('../images/dist/portfolio-bg-mob-left.svg') left top 55px no-repeat;
+      }
+   }
    section {
       align-items: flex-start;
       padding-top: 23px;
