@@ -395,7 +395,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initScrollbar() {
-        $(".article__content").mCustomScrollbar();
+        if (document.documentElement.clientWidth > 600) {
+            $(".article__content").mCustomScrollbar();
+        } 
         $(".about__text").mCustomScrollbar();
     }
 

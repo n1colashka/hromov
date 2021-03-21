@@ -80,6 +80,7 @@
    .steps {
       background: url('../images/dist/steps-bg-right-top.svg') top 30px right no-repeat,
                   url('../images/dist/steps-bg-left-top.svg') top left no-repeat;
+      background-color: #F5F5F5;
       &__list {
          margin-right: auto;
          justify-content: flex-start;
@@ -357,6 +358,7 @@
    .steps {
       background: url('../images/dist/steps-bg-tablet-right.svg') right top 73px no-repeat,
                   url('../images/dist/steps-bg-tablet-left.svg') left bottom 80px no-repeat;
+      background-color: #F5F5F5;
       &__slider {
          height: 350px;
          margin-right: -50px;
@@ -464,6 +466,9 @@
 }
 
 @media (max-width: 600px) {
+   .steps__slider .swiper-slide {
+      opacity: 1;
+   }
    .about__content {
       padding-bottom: 50px;
    }
@@ -535,6 +540,7 @@
    .article {
       background: url('../images/dist/article-bg-mob-right.svg') right top 170px no-repeat,
                   url('../images/dist/article-bg-mob-left.svg') left bottom 60px no-repeat;
+      height: auto;
       &__head {
          margin-bottom: 20px;
          background: none !important;
@@ -542,7 +548,7 @@
       }
 
       &__content {
-         max-height: 55;
+         height: auto;
       }
 
       &__box {
@@ -581,8 +587,6 @@
          background: none;
       }
       &__content {
-         margin-top: 20px;
-         height: 45vh;
       }
       &__wrapper {
          margin-top: 50px;
@@ -599,7 +603,7 @@
    .blog-page {
          
       .articles {
-         background: url('../images/dist/blog-bg-mob-right-top.svg') top 85px right no-repeat,
+         background: url('../images/dist/blog-bg-mob-right-top.svg') top 71px right no-repeat,
                      url('../images/dist/blog-bg-mob-right-bottom.svg') bottom 95px right no-repeat;
          padding: 0;
          padding-top: 50px;
@@ -816,6 +820,7 @@
    }
    .steps {
       background: url('../images/dist/steps-bg-mob-left.svg') left bottom 120px no-repeat;
+      background-color: #F5F5F5;
    }
    .nice-select {
       font-size: 12px;
@@ -840,7 +845,6 @@
       &__radio-item {
          font-size: 12px;
          line-height: 15px;
-         padding: 3px;
       }
       &__radio-items {
          label {
@@ -959,8 +963,8 @@
       }
    }
    .about {
-      background: url('../images/dist/about-bg-mob-bottom.svg') bottom right 30px no-repeat,
-                  url('../images/dist/about-bg-mob-top.svg') top 90px right no-repeat;
+      background: url('../images/dist/about-bg-mob-bottom.svg') bottom right 30px no-repeat;
+                  // url('../images/dist/about-bg-mob-top.svg') top 90px right no-repeat;
       &__title {
          margin-bottom: 20px;
          font-size: 25px;
@@ -1166,7 +1170,10 @@
       margin-top: 0;
    }
    .articles {
-      background: url('../images/dist/articles-bg-mob.svg') top 110px left no-repeat;
+      background: url('../images/dist/articles-bg-mob.svg') top 69px left no-repeat;
+      &__inner {
+         padding-top: 50px;
+      }
       &__title {
          font-size: 20px;
          line-height: 105.9%;
@@ -1182,7 +1189,7 @@
       }
       .slider-nav {
          justify-content: center;
-         margin-top: 7px;
+         margin-top: 0;
          top: auto;
       }
       &__text {
@@ -1198,7 +1205,7 @@
          line-height: 13px;
       }
       &__slider {
-         padding-bottom: 20px;
+         padding-bottom: 0;
          margin-right: -15px;
       }
       &__item-inner {
@@ -1259,9 +1266,9 @@
 
 @media (max-height: 1000px) {
    .article {
-      background-position: bottom 6px left;
+      // background-position: bottom 6px left;
       &__container {
-         padding-bottom: 40px;
+         // padding-bottom: 40px;
       }
    }
 }
@@ -1324,5 +1331,11 @@
 @media (max-width: 400px) {
    .about__text {
       height: 52vh;
+   }
+}
+
+@media (max-width: 350px) {
+   .form__radio-item {
+      padding: 8px;
    }
 }

@@ -4,8 +4,9 @@
     }
 }
 .article {
-    background: url('../images/dist/article-bg-left.svg') bottom 53px left no-repeat;
+    background: url('../images/dist/article-bg-left.svg') bottom 33px left no-repeat;
     align-items: flex-start;
+    padding-bottom: 90px;
     &__container {
         background: url('../images/dist/article-bg-right.svg') top 36px right no-repeat;
     }
@@ -39,7 +40,7 @@
     }
 
     &__content {
-        height: 39vh;
+        height: 45vh;
         margin-top: 40px;
         margin-bottom: 20px;
     }

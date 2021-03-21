@@ -5,6 +5,7 @@
                 url('../images/dist/steps-bg.svg') left bottom no-repeat;
     padding-top: 50px;
     align-items: flex-start;
+    background-color: #F5F5F5;
 
     &__list {
         display: flex;
@@ -61,7 +62,7 @@
     }
 
     &__title {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
 
     .swiper-pagination {

@@ -127,7 +127,7 @@ section {
 	}
 
 	&.clicked {
-		box-shadow:-23px -23px 24px 7px rgba(#733DFF,.15) !important;
+		// box-shadow:-23px -23px 24px 7px rgba(#733DFF,.15) !important;
 	}
 }
 
@@ -285,7 +285,9 @@ html, body {
 .arrow-prev,
 .arrow-next {
 	filter: drop-shadow(0px 1px 5px rgba(115, 61, 255, 0.6));
-	
+	path {
+		opacity: .1;
+	}
 	
 	&.active {
 		path {
@@ -374,7 +376,7 @@ html, body {
 		position: relative;
 		top: 50%;
 		left: 50%;
-		margin-top: -50px;
+		margin-top: 0;
 		transform: translate(-50%,-50%);
 	}
 	&__img {
@@ -390,7 +392,6 @@ html, body {
 		font-size: 30px;
 		line-height: 106.9%;
 		margin-bottom: 17px;
-		padding-right: 20px;
 	}
 
 	&__text {
@@ -398,7 +399,6 @@ html, body {
 		font-size: 16px;
 		line-height: 20px;
 		text-align: center;
-		padding-right: 20px;
 	}
 }
 
