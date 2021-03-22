@@ -381,6 +381,9 @@
       background: url('../images/dist/hero-bg-tablet.svg') bottom right no-repeat,
                   url('../images/dist/hero-bg-tablet-top-right.svg') top right no-repeat,
                   url('../images/dist/hero-bg-tablet-bottom-right.svg') bottom 55px right no-repeat;
+      &__inner {
+         padding-top: 0;
+      }
    }
 }
 
@@ -1207,7 +1210,7 @@
       }
       .slider-nav {
          justify-content: center;
-         margin-top: 10px;
+         margin-top: 0;
          top: auto;
       }
       &__text {
@@ -1332,7 +1335,7 @@
 //    }
 // }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1025px) {
    .page-wrapper {
       height: auto;
    }
@@ -1343,7 +1346,18 @@
    .article {
       padding-top: 0;
    }
-   
+   .steps {
+      background: url(../images/dist/steps-bg-tablet-right.svg) right top 103px no-repeat,url(../images/dist/steps-bg-tablet-left.svg) left bottom 15px no-repeat;
+   }
+   .steps__title {
+      margin-bottom: 55px;
+   }
+   .articles {
+      background: url(../images/dist/articles-bg-tablet-top-right.svg) top 30px right no-repeat,url(../images/dist/articles-bg-tablet-top-left.svg) top 100px left no-repeat,url(../images/dist/articles-bg-tablet-bottom-right.svg) bottom 25px right no-repeat;
+   }
+   .contacts {
+      background: url(../images/dist/contacts-bg-tablet-3.svg) bottom 0px right 55px no-repeat,url(../images/dist/contacts-bg-tablet-2.svg) top 124px right no-repeat;
+   }
 }
 
 @media (max-width: 400px) {

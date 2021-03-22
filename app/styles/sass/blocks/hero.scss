@@ -2,6 +2,10 @@
     background: url('../images/dist/hero-bg.svg') center / cover no-repeat;
     padding-top: 130px;
 
+    &__inner {
+        padding-top: 100px;
+    }
+
     &__content {
         margin-bottom: 95px;
         max-width: 430px;
