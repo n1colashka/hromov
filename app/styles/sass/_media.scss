@@ -102,6 +102,7 @@
 @media (max-width: 1024px) {
    .project__left {
       margin-right: 0;
+      max-width: 100%;
    }
    .circle__border {
       display: none;
@@ -168,7 +169,7 @@
       }
    }
    .project {
-      background: url('../images/dist/project-bg-tablet.svg') right top 253px no-repeat,
+      background: url('../images/dist/project-bg-tablet.svg') right top 235px no-repeat,
                   url('../images/dist/project-bg-tablet.svg') right bottom 43px no-repeat;
       height: auto;
       &__slider {

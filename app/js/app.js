@@ -409,6 +409,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initBtnsClick() {
         document.querySelectorAll('.btn').forEach(btn => {
+            
             btn.addEventListener('click', function() {
                 btn.classList.add('clicked');
             })
