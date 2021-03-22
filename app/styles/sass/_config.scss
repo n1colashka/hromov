@@ -476,6 +476,11 @@ html, * {
 .nice-select .option.disabled {
 	display: none;
 }
+.articles,.services {
+	.swiper-wrapper {
+		height: auto;
+	}
+}
 body {
 	.nice-select {
 		.option {
