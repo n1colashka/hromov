@@ -498,7 +498,9 @@
 }
 
 @media (max-width: 600px) {
-   
+   html, body {
+      overflow-x: auto;
+   }
    .steps__slider .swiper-slide {
       opacity: 1;
    }
@@ -1183,6 +1185,7 @@
       }
    }
    .steps {
+      padding-top: 50px;
       &__num {
          font-size: 50px;
          line-height: 61px;
@@ -1214,7 +1217,6 @@
          font-size: 20px;
          line-height: 24px;
       }
-      padding-top: 25px;
    }
    .section__link img {
       margin-top: 0;

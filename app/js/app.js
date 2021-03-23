@@ -416,13 +416,23 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    $(window).on('orientationchange', function() {
-        if (window.orientation != 0) {
-            document.getElementById('block_land').style.display = 'flex';
-        } else {
-            document.getElementById('block_land').style.display = 'none';
-        }
-    });
+    function initCheckLandscape() {
+        $(window).on('orientationchange', function() {
+            if (window.orientation != 0) {
+                document.getElementById('block_land').style.display = 'flex';
+            } else {
+                document.getElementById('block_land').style.display = 'none';
+            }
+        });
+    }
+
+    function initScrollToAnchor() {
+        $(".menu__navigation a").on('click', function(e) {
+            e.preventDefault();
+            var dest = $(this).attr('href');
+            $('html,body').animate({ scrollTop: $(dest).offset().top }, 500);    
+        });
+    }
 
     initMenu();
     initDynamicAdapt();
@@ -437,4 +447,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollbar();
     initCursor();
     initBtnsClick();
+    initCheckLandscape();
+    initScrollToAnchor();
 })
