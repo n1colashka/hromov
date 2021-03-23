@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function initFullPageSlider() {
         
-        if (document.documentElement.clientWidth < 1025 && document.documentElement.clientWidth > 600) {
+        if (document.documentElement.clientWidth < 1025) {
             
         } else {
             $('#fullpage').fullpage({
