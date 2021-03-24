@@ -36,7 +36,7 @@
     &__item {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         height: 100%;
         
@@ -106,10 +106,6 @@
 
     &__call {
         padding-left: 13px;
-
-        .footer__item-head {
-            margin-left: auto;
-        }
         
         li {
             color: #000;
