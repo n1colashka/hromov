@@ -251,6 +251,10 @@ html, body {
 	box-shadow: -3px -3px 5px #FFFFFF, 3px 3px 5px rgba(0, 0, 0, 0.05), inset 3px 3px 5px rgba(0, 0, 0, 0.05), inset -3px -3px 5px #FFFFFF;
 }
 
+section {
+	overflow: hidden;
+}
+
 .section {
 	&__link {
 		position: relative;
@@ -273,6 +277,7 @@ html, body {
 .arrow-prev,
 .arrow-next {
 	filter: drop-shadow(0px 1px 5px rgba(115, 61, 255, 0.6));
+	background-color: transparent;
 	path {
 		opacity: .1;
 	}

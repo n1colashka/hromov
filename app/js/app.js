@@ -214,6 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var mySwiper = new Swiper('.projects-page__slider', {
                     watchSlidesVisibility: true,
                     slidesPerView: 2.8,
+                    spaceBetween: 18,
                     breakpoints: {
                         320: {
                             slidesPerView: 2,
@@ -228,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var mySwiper = new Swiper('.projects__slider', {
                     watchSlidesVisibility: true,
                     slidesPerView: 2.8,
+                    spaceBetween: 18,
                     breakpoints: {
                         320: {
                             slidesPerView: 2.3,

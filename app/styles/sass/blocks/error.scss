@@ -1,12 +1,17 @@
 .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     flex-direction: column;
     background: url('../images/dist/error-bg-top-left.svg') left 133px top 0 no-repeat,
                 url('../images/dist/error-bg-bottom-left.svg') left 0 bottom 70px no-repeat,
                 url('../images/dist/error-bg-top-right.svg') right 0 top 63px no-repeat,
                 url('../images/dist/error-bg-bottom-right.svg') right 117px bottom 0 no-repeat;
-    &__title {
+    .error__title {
         margin-bottom: 20px;
         text-align: center;
+        padding-right: 0;
     }
 
     &__img {
