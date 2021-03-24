@@ -438,11 +438,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initScrollToAnchor() {
-        $(".menu__navigation a").on('click', function(e) {
-            e.preventDefault();
-            var dest = $(this).attr('href');
-            $('html,body').animate({ scrollTop: $(dest).offset().top }, 500);    
-        });
+        if (document.documentElement.clientWidth < 1025) {
+            document.querySelectorAll('[data-anchor]').forEach(item => {
+                item.id = item.dataset.anchor;
+            })
+            $(".menu__navigation a").on('click', function(e) {
+                e.preventDefault();
+                var dest = $(this).attr('href');
+                $('html,body').animate({ scrollTop: $(dest).offset().top }, 500);    
+            });
+        }
     }
 
     initMenu();
