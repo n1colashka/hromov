@@ -120,6 +120,12 @@
 }
 
 @media (max-width: 1024px) {
+   .arrow-prev,
+   .arrow-next {
+      svg {
+         filter: none;
+      }
+   }
    section {
       height: 100%;
       padding: 30px 0;
