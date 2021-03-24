@@ -142,6 +142,9 @@
    .footer {
       display: none;
    }
+   .menu {
+      max-width: 100%;
+   }
    
    .error {
       background: 
@@ -218,8 +221,8 @@
    }
    .projects-page {
       .projects {
-         background: url('../images/dist/portfolio-bg-tablet-right.svg') right bottom 15px no-repeat,
-         url('../images/dist/portfolio-bg-tablet-left.svg') left top 93px no-repeat;
+         background: url('../images/dist/portfolio-bg-tablet-right.svg') right bottom 40px no-repeat,
+         url('../images/dist/portfolio-bg-tablet-left.svg') left top 115px no-repeat;
       }
    }
    

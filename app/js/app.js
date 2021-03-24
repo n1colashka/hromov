@@ -11,15 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.querySelectorAll('.menu__navigation a').forEach(link => {
             link.addEventListener('click', function() {
                 menu.classList.remove('active');
+                if (document.documentElement.clientWidth < 1025) {
+                    html.classList.remove('overflow-hidden');
+                }
             })
         })
         
         menuBtn.addEventListener('click', function() {
             menu.classList.add('active');
+            if (document.documentElement.clientWidth < 1025) {
+                html.classList.add('overflow-hidden');
+            }
         })
         menuClose.addEventListener('click', function() {
             menuClose.classList.remove('active');
             menu.classList.remove('active');
+            if (document.documentElement.clientWidth < 1025) {
+                html.classList.remove('overflow-hidden');
+            }
         })
     }
     function initDynamicAdapt() {
