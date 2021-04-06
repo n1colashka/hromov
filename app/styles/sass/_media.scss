@@ -89,7 +89,7 @@
       background-color: #F5F5F5;
       &__list {
          margin-right: auto;
-         justify-content: flex-start;
+         justify-content: center;
       }
    }
    .project {
@@ -105,6 +105,35 @@
 }
 
 @media (max-width: 1025px) {
+   .about {
+      background: url('../images/dist/about-bg-tablet.svg') top 22px right no-repeat,
+                  url('../images/dist/about-bg-tablet-bottom.svg') bottom  right 293px no-repeat;
+      background-color: #f5f5f5;
+      padding-bottom: 60px;
+      &__text {
+         font-size: 14px;
+         line-height: 132.5%;
+         margin-bottom: 30px;
+         margin-right: 50px;
+      }
+      &__inner {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__boxes {
+         flex-direction: column;
+         justify-content: flex-start;
+         flex-shrink: 0;
+      }
+      &__box {
+         margin-left: 0;
+         margin-bottom: 8px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
    .page-wrapper {
       height: auto;
    }
@@ -114,6 +143,19 @@
    .steps {
       background: url(../images/dist/steps-bg-tablet-right.svg) right top 103px no-repeat,url(../images/dist/steps-bg-tablet-left.svg) left bottom 15px no-repeat;
    }
+   .steps__slider {
+      overflow: visible;
+      .swiper-slide {
+         opacity: 0;
+
+         &:last-child {
+            opacity: 1;
+         }
+      }
+      .swiper-slide-visible, .swiper-slide-active {
+         opacity: 1;
+      }
+   }
    .steps__title {
       margin-bottom: 35px;
    }
@@ -122,6 +164,29 @@
    }
    .contacts {
       background: url(../images/dist/contacts-bg-tablet-3.svg) bottom 0px right 55px no-repeat,url(../images/dist/contacts-bg-tablet-2.svg) top 124px right no-repeat;
+   }
+   .steps {
+      background: url('../images/dist/steps-bg-tablet-right.svg') right top 73px no-repeat,
+                  url('../images/dist/steps-bg-tablet-left.svg') left bottom 15px no-repeat;
+      background-color: #F5F5F5;
+      padding-bottom: 55px;
+      padding-top: 35px;
+      &__slider {
+         height: auto;
+         margin-right: auto;
+      }
+      
+      &__list {
+         max-width: 100%;
+         margin: 0;
+         justify-content: flex-start;
+         flex-wrap: nowrap;
+      }
+      .steps__item {
+         width: 100%;
+         margin: 0;
+         max-width: 280px;
+      }
    }
 }
 
@@ -169,19 +234,7 @@
       }
    }
 
-   .steps__slider {
-      overflow: visible;
-      .swiper-slide {
-         opacity: 0;
-
-         &:last-child {
-            opacity: 1;
-         }
-      }
-      .swiper-slide-visible, .swiper-slide-active {
-         opacity: 1;
-      }
-   }
+   
    
    .contacts-info-wrapper {
       background: url('../images/dist/info-bg-tablet-top.svg') top 125px right 0 no-repeat;
@@ -326,35 +379,7 @@
          // padding: 0 18px;
       }
    }
-   .about {
-      background: url('../images/dist/about-bg-tablet.svg') top 22px right no-repeat,
-                  url('../images/dist/about-bg-tablet-bottom.svg') bottom  right 293px no-repeat;
-      background-color: #f5f5f5;
-      padding-bottom: 60px;
-      &__text {
-         font-size: 14px;
-         line-height: 132.5%;
-         margin-bottom: 30px;
-         margin-right: 50px;
-      }
-      &__inner {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-      }
-      &__boxes {
-         flex-direction: column;
-         justify-content: flex-start;
-         flex-shrink: 0;
-      }
-      &__box {
-         margin-left: 0;
-         margin-bottom: 8px;
-         &:last-child {
-            margin-bottom: 0;
-         }
-      }
-   }
+   
    .services {
       background: url('../images/dist/services-bg-tablet-top.svg') top 35px right no-repeat,
                   url('../images/dist/services-bg-tablet-bottom.svg') bottom 43px left no-repeat;
@@ -412,27 +437,7 @@
    .menu {
       padding: 25px 32px;
    }
-   .steps {
-      background: url('../images/dist/steps-bg-tablet-right.svg') right top 73px no-repeat,
-                  url('../images/dist/steps-bg-tablet-left.svg') left bottom 15px no-repeat;
-      background-color: #F5F5F5;
-      padding-bottom: 55px;
-      padding-top: 35px;
-      &__slider {
-         height: auto;
-         margin-right: -50px;
-      }
-      
-      &__list {
-         max-width: 100%;
-         margin: 0;
-         flex-wrap: nowrap;
-      }
-      .steps__item {
-         width: 100%;
-         margin: 0;
-      }
-   }
+   
    .hero {
       padding-top: 200px;
       padding-bottom: 63px;

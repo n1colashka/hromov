@@ -222,14 +222,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (document.querySelector('.projects-page')) {
                 var mySwiper = new Swiper('.projects-page__slider', {
                     watchSlidesVisibility: true,
-                    slidesPerView: 2.8,
+                    slidesPerView: 2,
                     spaceBetween: 18,
                     breakpoints: {
                         320: {
                             slidesPerView: 2,
-                        },
-                        601: {
-                            slidesPerView: 2.8,
                         },
                     }
                 });
@@ -237,14 +234,17 @@ document.addEventListener('DOMContentLoaded', function() {
             else {
                 var mySwiper = new Swiper('.projects__slider', {
                     watchSlidesVisibility: true,
-                    slidesPerView: 2.8,
+                    slidesPerView: 3.5,
                     spaceBetween: 18,
                     breakpoints: {
                         320: {
-                            slidesPerView: 2.3,
+                            slidesPerView: 1.3,
                         },
                         601: {
                             slidesPerView: 2.8,
+                        },
+                        800: {
+                            slidesPerView: 3.5,
                         },
                     }
                 });
@@ -253,13 +253,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function initStepsSlider() {
-        if (document.documentElement.clientWidth < 1025) {
+        if (document.documentElement.clientWidth < 1026) {
             $('.steps__slider').addClass('swiper-container');
             $('.steps__list').addClass('swiper-wrapper');
             $('.steps__item').addClass('swiper-slide');
             var mySwiper = new Swiper('.steps__slider', {
                 watchSlidesVisibility: true,
-                slidesPerView: 2.6,
+                slidesPerView: 2.7,
                 pagination: {
                     el: '.swiper-pagination',
                     type: 'fraction',
@@ -270,8 +270,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         slidesPerView: 1.3,
                     },
                     601: {
-                        slidesPerView: 2.6,
+                        slidesPerView: 2.7,
                     },
+                    800: {
+                        slidesPerView: 2.6,
+                    }
                 }
             });
         }
@@ -289,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     nextEl: '.slider-next',
                     prevEl: '.slider-prev',
                 },
-                spaceBetween: 20
+                spaceBetween: 20,
             });
         }
     }
@@ -366,6 +369,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     601: {
                         slidesPerView: 2.5,
                         spaceBetween: 24 ,
+                    },
+                    800: {
+                        slidesPerView: 3.3,
                     },
                     1025: {
                         slidesPerView: 4,
